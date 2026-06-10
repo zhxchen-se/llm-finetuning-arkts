@@ -9,13 +9,13 @@
         "MODULE_TYPE": "entry",
         "INCREMENTAL_TASKS": {
           "BUILD_NATIVE_WITH_CMAKE": true,
-          "COMPILE_ARKTS": false
+          "COMPILE_ARKTS": true
         },
-        "IS_INCREMENTAL_MODULE": false
+        "IS_INCREMENTAL_MODULE": true
       }
     ],
     "NATIVE_COMPILER": "Default",
-    "IS_FULL_BUILD": true,
+    "IS_FULL_BUILD": false,
     "BUILD_MODE": "debug"
   },
   "HVIGOR": {
@@ -25,16 +25,16 @@
     "IS_HVIGORFILE_TYPE_CHECK": false,
     "TASK_TIME": {
       "923fe53966c6cd9343e11af776cd4b05be315ea4b200b02e4d5dfb0f929b73bf": {
-        "CreateModuleInfo": 2571900,
-        "ConfigureCmake": 10626000,
-        "PreCheckSyscap": 1260400,
-        "GeneratePkgSdkInfo": 4635200,
-        "ProcessIntegratedHsp": 2992800,
-        "BuildNativeWithCmake": 26284000,
-        "SyscapTransform": 3744600,
-        "ProcessStartupConfig": 3040900,
-        "BuildJS": 3573900,
-        "BuildNativeWithNinja": 322367100
+        "CreateModuleInfo": 477300,
+        "ConfigureCmake": 1542900,
+        "PreCheckSyscap": 311300,
+        "GeneratePkgSdkInfo": 2431900,
+        "ProcessIntegratedHsp": 677500,
+        "BuildNativeWithCmake": 10952700,
+        "SyscapTransform": 1951300,
+        "ProcessStartupConfig": 1831500,
+        "BuildJS": 2290000,
+        "BuildNativeWithNinja": 105040900
       }
     },
     "APIS": [
@@ -45,12 +45,12 @@
       "ENABLE_CPP_FUNCTION_LEVEL_INCREMENTAL": false
     },
     "CONFIG_PROPERTIES": {},
-    "TOTAL_TIME": 1582977200,
-    "BUILD_ID": "202606102214249310",
+    "TOTAL_TIME": 1339990000,
+    "BUILD_ID": "202606102354026690",
     "ERROR_MESSAGE": [
       {
-        "CODE": "10605034",
-        "STACK": "...\n10605034 ArkTS Compiler Error\n...\n10605008 ArkTS Compiler Error\n...\n    at runArkPack (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\ar***k.js:1:5076)\n...\n    at throwArkTsCompilerError (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\data\\co***r.js:1:423)\n    at throwErrorIfHasErrorInfo (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\plugins\\co***n.js:1:4894)\n    at Object.handler (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\plugins\\co***n.js:1:2989)\n    at ***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-base\\node_modules\\rollup\\dist\\shared\\ro***p.js:27864:40",
+        "CODE": "10505001",
+        "STACK": "...\n10505001 ArkTS Compiler Error\n...\n10905204 ArkTS Compiler Error\n...\n    at runArkPack (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\ar***k.js:1:5076)\n...\n    at throwArkTsCompilerError (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\data\\co***r.js:1:423)\n    at throwErrorIfHasErrorInfo (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\plugins\\co***n.js:1:4894)\n    at Object.handler (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\plugins\\co***n.js:1:2989)\n    at ***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-base\\node_modules\\rollup\\dist\\shared\\ro***p.js:27864:40",
         "PROJECT_CONFIG": {
           "buildMode": "Debug",
           "compileMode": "esmodule",
@@ -108,12 +108,12 @@
         }
       },
       {
-        "CODE": "10605034",
-        "TIMESTAMP": "1781100866499"
+        "CODE": "10505001",
+        "TIMESTAMP": "1781106844000"
       },
       {
-        "CODE": "10605008",
-        "TIMESTAMP": "1781100866499"
+        "CODE": "10905204",
+        "TIMESTAMP": "1781106844000"
       }
     ]
   }
