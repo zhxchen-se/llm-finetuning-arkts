@@ -39,11 +39,21 @@ To run the compilation framework, you must have the Huawei development environme
     # The script uses internal tools found inside this directory
     ```
 
+    *Example (Windows PowerShell):*
+    ```powershell
+    $env:DEVECO_HOME = "D:\Program Files\Huawei\DevEco Studio"
+    $env:SiliconCloud_API_KEY = "your-api-key"
+    ```
+
 ### 2. Running the Evaluation
 
 The `compiler_tool.py` script serves as the main entry point. It reads instructions from the dataset, queries the model (if configured) or takes generated code, injects it into the `entry` module, and attempts compilation.
 
 **To run the syntactic validation:**
 
-```bash
-python compiler_tool.py --input arkTS_test_data.csv
+```powershell
+python compiler_tool.py --input arkTS_test_data.csv --output-dir evaluation_outputs --results-csv evaluation_outputs/results.csv
+```
+
+The evaluation runs each prompt in `arkTS_test_data.csv` sequentially. For every prompt, it saves the generated ArkTS code to `evaluation_outputs/code/`, compiles the code by injecting it into `entry/src/main/ets/pages/Index.ets`, and appends the output path plus compilation result to `evaluation_outputs/results.csv`.
+Progress logs are printed to the console with timestamps. Use `--log-level DEBUG`, `INFO`, `WARNING`, or `ERROR` to adjust verbosity.

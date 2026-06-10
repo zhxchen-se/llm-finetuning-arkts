@@ -1,264 +1,436 @@
-import os
+import argparse
 import csv
+import logging
+import os
 import re
 import subprocess
-from typing import Type
-from pydantic import BaseModel, Field
-import pandas as pd
+import time
+from pathlib import Path
+from typing import Optional
+
 from openai import OpenAI
+
 from FileCache import FileCache
 
-# -------------------------------
-# OpenAI Client Setup
-# -------------------------------
-client = OpenAI(
-    api_key="your-key", # Replace with your actual API key
-    base_url="https://openrouter.ai/api/v1",
-)
-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ghp
-# -------------------------------
-# Environment Variable Setup
-# -------------------------------
-# Define directories from your DevEco Studio installation
-node_home = "/Users/cem/Desktop/DevEco-Studio.app/Contents/tools/node"
-hvigorw_dir = "/Users/cem/Desktop/DevEco-Studio.app/Contents/tools/hvigor/bin"
-java_home = "/Users/cem/Desktop/DevEco-Studio.app/Contents/jbr/Contents/Home"
-sdk_home = "/Users/cem/Desktop/DevEco-Studio.app/Contents/sdk"
 
-# Set environment variables to mirror DevEco Studio's environment
-os.environ["NODE_HOME"] = node_home
-os.environ["DEVECO_SDK_HOME"] = sdk_home
-os.environ["JAVA_HOME"] = java_home
+API_KEY_ENV = "SiliconCloud_API_KEY"
+DEFAULT_BASE_URL = "https://api.siliconflow.cn/v1"
+DEFAULT_MODEL = "deepseek-ai/DeepSeek-V4-Pro"
+PROJECT_ROOT = Path(__file__).resolve().parent
+INDEX_FILE_PATH = PROJECT_ROOT / "entry" / "src" / "main" / "ets" / "pages" / "Index.ets"
+LOGGER = logging.getLogger("arkts_eval")
 
-# Update PATH to include necessary binaries
-node_bin = os.path.join(node_home, "bin")
-java_bin = os.path.join(java_home, "bin")
-os.environ["PATH"] = hvigorw_dir + os.pathsep + node_bin + os.pathsep + java_bin + os.pathsep + os.environ.get("PATH", "")
 
-# -------------------------------
-# File Paths and Caching
-# -------------------------------
-index_file_path = "/Users/cem/DevEcoStudioProjects/pycharm_project/entry/src/main/ets/pages/Index.ets"
-
-# Initialize file cache to manage the Index.ets file
-file_cache = FileCache()
-file_cache.cache_file(index_file_path)
-
-# -------------------------------
-# Core Functions
-# -------------------------------
-
-def send_prompt_to_openai_router(prompt):
-    """Sends a prompt to the LLM and returns the response."""
-    response = client.chat.completions.create(
-        model="deepseek/deepseek-chat-v3-0324",
-        messages=[
-            {"role": "system", "content": "You are a UI developer who uses arkTS language which is a new programming language extended from typescript. You should only write arkTS code"},
-            {"role": "user", "content": [{"type": "text", "text": prompt}]}
-        ]
+def configure_logging(log_level: str) -> None:
+    logging.basicConfig(
+        level=getattr(logging, log_level.upper()),
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
     )
-    answer = response.choices[0].message.content.strip()
-    return answer
 
-def compile_file():
-    """Runs the ArkTS compiler via the hvigor wrapper and returns the result."""
-    env = os.environ.copy()
-    node_path = os.path.join(node_bin, "node")
-    hvigor_path = os.path.join(hvigorw_dir, "hvigorw.js")
 
-    build_cmd = [
-        node_path, hvigor_path,
-        "--mode", "module", "-p", "module=entry@default", "-p", "product=default",
-        "-p", "requiredDeviceType=phone", "-p", "arkts.compiler.ets.tsType.nullable=true",
-        "-p", "arkts.compiler.ets.type-check=false", "assembleHap",
-        "--analyze=normal", "--parallel", "--incremental=false", "--daemon"
+def format_command(command: list[str]) -> str:
+    return " ".join(f'"{part}"' if " " in part else part for part in command)
+
+
+def create_llm_client(base_url: str) -> OpenAI:
+    api_key = os.environ.get(API_KEY_ENV)
+    if not api_key:
+        raise RuntimeError(
+            f"Missing API key. Set environment variable {API_KEY_ENV} before running evaluation."
+        )
+    LOGGER.info("Creating LLM client: base_url=%s api_key_env=%s", base_url, API_KEY_ENV)
+    return OpenAI(api_key=api_key, base_url=base_url)
+
+
+def resolve_deveco_home(cli_value: Optional[str]) -> Path:
+    candidates = [
+        cli_value,
+        os.environ.get("DEVECO_HOME"),
+        r"D:\Program Files\Huawei\DevEco Studio",
+        r"C:\Program Files\Huawei\DevEco Studio",
     ]
-
-    try:
-        result = subprocess.run(build_cmd, check=True, capture_output=True, text=True, env=env)
-        return 0, result.stdout
-    except subprocess.CalledProcessError as e:
-        return e.returncode, e.stderr
-
-def get_llm_response(prompt):
-    """Gets a response from a fine-tuned LLM."""
-    completion = client.chat.completions.create(
-        model="ft:gpt-4o-mini-2024-07-18:personal:arktsfinetunedb32:BI8BVdIe",
-        messages=[
-            {"role": "system", "content": "You are a UI developer who uses arkTS language which is a new programming language extended from typescript."},
-            {"role": "user", "content": prompt}
-        ]
+    for candidate in candidates:
+        if not candidate:
+            continue
+        path = Path(candidate).expanduser()
+        if path.exists():
+            return path.resolve()
+    raise FileNotFoundError(
+        "DevEco Studio was not found. Set DEVECO_HOME or pass --deveco-home."
     )
-    return completion.choices[0].message.content
 
-def extract_code_from_response(response):
-    """Extracts ArkTS code blocks from the LLM response markdown."""
+
+def first_existing(paths: list[Path], description: str) -> Path:
+    for path in paths:
+        if path.exists():
+            return path
+    searched = ", ".join(str(path) for path in paths)
+    raise FileNotFoundError(f"Could not find {description}. Searched: {searched}")
+
+
+def create_build_environment(deveco_home: Path) -> tuple[dict[str, str], Path, Path]:
+    node_home = deveco_home / "tools" / "node"
+    hvigorw_dir = deveco_home / "tools" / "hvigor" / "bin"
+    sdk_home = deveco_home / "sdk"
+
+    node_path = first_existing(
+        [
+            node_home / "node.exe",
+            node_home / "bin" / "node",
+            node_home / "node",
+        ],
+        "DevEco Node executable",
+    )
+    hvigor_path = first_existing([hvigorw_dir / "hvigorw.js"], "hvigorw.js")
+    java_home = first_existing(
+        [
+            deveco_home / "jbr",
+            deveco_home / "jbr" / "Contents" / "Home",
+        ],
+        "DevEco bundled JBR",
+    )
+
+    env = os.environ.copy()
+    env["NODE_HOME"] = str(node_home)
+    env["DEVECO_SDK_HOME"] = str(sdk_home)
+    env["JAVA_HOME"] = str(java_home)
+
+    path_parts = [
+        str(hvigorw_dir),
+        str(node_home),
+        str(node_home / "bin"),
+        str(java_home / "bin"),
+        env.get("PATH", ""),
+    ]
+    env["PATH"] = os.pathsep.join(part for part in path_parts if part)
+    return env, node_path, hvigor_path
+
+
+def extract_code_from_response(response: str) -> str:
+    """Extract the longest code block from a model response."""
     code_pattern = r"```(?:arkts|typescript|ts|javascript|js)?\s*([\s\S]*?)\s*```"
     matches = re.findall(code_pattern, response)
     if matches:
         return max(matches, key=len).strip()
-    else:
-        return response.strip()
+    return response.strip()
 
-def enhance_error_with_source_line(error_message):
-    """Enhances compiler error messages with the relevant source code line and context."""
-    file_line_pattern = r'File: (.*?):(\d+):(\d+)'
-    match = re.search(file_line_pattern, error_message)
 
-    if not match:
-        return error_message
-
-    file_path, line_number, column = match.groups()
-    line_number, column = int(line_number), int(column)
-
-    if not os.path.isfile(file_path):
-        return error_message
-
+def generate_arkts_code(client: OpenAI, model: str, instruction: str) -> str:
+    prompt_preview = " ".join(instruction.split())[:160]
+    LOGGER.info(
+        "Calling LLM: model=%s prompt_chars=%d prompt_preview=%r",
+        model,
+        len(instruction),
+        prompt_preview,
+    )
+    started_at = time.perf_counter()
     try:
-        with open(file_path, 'r') as f:
-            lines = f.readlines()
-
-        if 0 < line_number <= len(lines):
-            source_line = lines[line_number - 1].rstrip()
-            pointer = ' ' * (column - 1) + '^'
-            enhanced_error = f"{error_message}\n\nSource code at {file_path}:{line_number}:{column}:\n{source_line}\n{pointer}"
-
-            context_start = max(0, line_number - 4)
-            context_end = min(len(lines), line_number + 3)
-            context = []
-            for i in range(context_start, context_end):
-                prefix = '> ' if (i + 1) == line_number else '  '
-                context.append(f"{prefix}{i + 1}: {lines[i].rstrip()}")
-            enhanced_error += "\n\nContext:\n" + "\n".join(context)
-            return enhanced_error
-        else:
-            return error_message
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a HarmonyOS ArkTS developer. Return only a complete "
+                        "ArkTS source file for entry/src/main/ets/pages/Index.ets. "
+                        "Do not include markdown fences or explanations."
+                    ),
+                },
+                {"role": "user", "content": instruction},
+            ],
+            temperature=0,
+        )
     except Exception:
-        return error_message
+        LOGGER.exception("LLM request failed after %.1fs", time.perf_counter() - started_at)
+        raise
 
-def count_errors(message):
-    """Counts the number of 'ERROR' occurrences in a compiler message."""
-    return message.upper().count('ERROR') if message else 0
+    raw_content = response.choices[0].message.content or ""
+    code = extract_code_from_response(raw_content)
+    LOGGER.info(
+        "LLM returned: response_chars=%d code_chars=%d elapsed=%.1fs",
+        len(raw_content),
+        len(code),
+        time.perf_counter() - started_at,
+    )
+    return code
 
-# -------------------------------
-# ArkTS Compiler Tool Definition
-# -------------------------------
 
-class ArkTSCompilerInput(BaseModel):
-    """Input for the ArkTS compiler, expecting the full source code of an .ets file."""
-    index_code: str = Field(..., description="The full ArkTS source code for the Index.ets file.")
+def count_errors(message: str) -> int:
+    return message.upper().count("ERROR") if message else 0
+
 
 class ArkTSCompiler:
-    """
-    A tool that compiles ArkTS code within a HarmonyOS project by updating
-    the Index.ets file and running the standard hvigor build command.
-    """
-    name: str = "ArkTS Code Compiler"
-    description: str = (
-        "This tool validates ArkTS code by placing it into an existing HarmonyOS project and running the build process. "
-        "If the build succeeds, it returns a code of 0. If it fails, it returns the compiler's error message."
+    def __init__(self, index_file_path: Path, deveco_home: Path):
+        self.index_file_path = index_file_path.resolve()
+        self.env, self.node_path, self.hvigor_path = create_build_environment(deveco_home)
+        self.file_cache = FileCache()
+        self.file_cache.cache_file(str(self.index_file_path))
+        self._restored = False
+        LOGGER.info("DevEco home: %s", deveco_home)
+        LOGGER.info("DevEco node: %s", self.node_path)
+        LOGGER.info("DevEco hvigor: %s", self.hvigor_path)
+        LOGGER.info("Target Index.ets: %s", self.index_file_path)
+
+    def compile_code(self, code: str) -> tuple[int, str]:
+        LOGGER.info(
+            "Writing generated code to project entry file: path=%s code_chars=%d",
+            self.index_file_path,
+            len(code),
+        )
+        self.file_cache.update_file(str(self.index_file_path), new_content=code)
+        build_cmd = [
+            str(self.node_path),
+            str(self.hvigor_path),
+            "--mode",
+            "module",
+            "-p",
+            "module=entry@default",
+            "-p",
+            "product=default",
+            "-p",
+            "requiredDeviceType=phone",
+            "-p",
+            "arkts.compiler.ets.tsType.nullable=true",
+            "-p",
+            "arkts.compiler.ets.type-check=false",
+            "assembleHap",
+            "--analyze=normal",
+            "--parallel",
+            "--incremental=false",
+            "--daemon",
+        ]
+        LOGGER.info(
+            "Starting hvigor compile: cwd=%s command=%s",
+            PROJECT_ROOT,
+            format_command(build_cmd),
+        )
+        started_at = time.perf_counter()
+        try:
+            result = subprocess.run(
+                build_cmd,
+                cwd=PROJECT_ROOT,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                env=self.env,
+            )
+        except Exception:
+            LOGGER.exception("hvigor compile failed before completion after %.1fs", time.perf_counter() - started_at)
+            raise
+        message = "\n".join(part for part in [result.stdout, result.stderr] if part)
+        LOGGER.info(
+            "hvigor compile finished: return_code=%s output_chars=%d elapsed=%.1fs",
+            result.returncode,
+            len(message),
+            time.perf_counter() - started_at,
+        )
+        return result.returncode, message
+
+    def restore_original(self) -> None:
+        if not self._restored:
+            LOGGER.info("Restoring original Index.ets: %s", self.index_file_path)
+            self.file_cache.revert_file(str(self.index_file_path))
+            self._restored = True
+
+
+def infer_instruction_column(fieldnames: list[str], requested_column: Optional[str]) -> str:
+    if requested_column:
+        if requested_column not in fieldnames:
+            raise ValueError(
+                f"CSV column '{requested_column}' was not found. Available columns: {fieldnames}"
+            )
+        return requested_column
+
+    for candidate in ["instruction", "Test Instructions", "prompt"]:
+        if candidate in fieldnames:
+            return candidate
+    raise ValueError(
+        "Could not infer instruction column. Pass --instruction-column. "
+        f"Available columns: {fieldnames}"
     )
-    args_schema: Type[BaseModel] = ArkTSCompilerInput
 
-    def _run(self, argument: ArkTSCompilerInput) -> tuple[int, str]:
-        """Takes ArkTS code, writes it to the Index.ets file, compiles, and returns the result."""
-        file_cache.update_file(index_file_path, new_content=argument.index_code)
-        return_code, message = compile_file()
-        return return_code, message
 
-# -------------------------------
-# Evaluation and Utility Functions
-# -------------------------------
+def read_instructions(input_csv: Path, instruction_column: Optional[str]) -> list[dict[str, str]]:
+    with input_csv.open("r", newline="", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        if not reader.fieldnames:
+            raise ValueError(f"Input CSV has no header: {input_csv}")
+        column = infer_instruction_column(reader.fieldnames, instruction_column)
+        rows = []
+        for row_index, row in enumerate(reader, start=1):
+            instruction = (row.get(column) or "").strip()
+            if instruction:
+                rows.append({"index": str(row_index), "instruction": instruction})
+        return rows
 
-def create_evaluation_csv(filename="evaluationb16.csv"):
-    """Creates a new CSV file for evaluation with predefined headers and instructions."""
-    headers = ["Test Instructions", "Fine-tuned Model Output", "Pass1 Error Count", "Pass2 Error Count", "Pass3 Error Count"]
-    test_instructions = [
-        "Create an object in the screen and enable the user to drag it somewhere else. (The code should be implemented using arkTS language)",
-        "Implement a toggle component which acts as a on and off switch (The code should be implemented using arkTS language)",
-        "Implement an array with fruit names and show them in a list in the screen. (The code should be implemented using arkTS language)",
-        "Implement an array with fruit names and for each fruit put its image next to the current item in the screen. You may assume that al the names of the images are “app.media.icon”. (The code should be implemented using arkTS language)",
-        "Implement a long array of list of items and make sure that the list is scrollable.  (The code should be implemented using arkTS language)",
-        "Create a slider component from 0 to 100. (The code should be implemented using arkTS language)",
-        "Show a yellow circle in the center of the screen and write a text underneath saying “shape circle” The code should be implemented using arkTS language)",
-    ]
-    rows = [[instruction, "", "", "", ""] for instruction in test_instructions]
-    with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(headers)
-        writer.writerows(rows)
-    print(f"CSV file '{filename}' has been created successfully.")
 
-def evaluate_llm_performance(csv_filename="evaluationb16.csv"):
-    """Runs a multi-pass evaluation of an LLM using instructions from a CSV file."""
+def write_result_header(results_csv: Path) -> None:
+    results_csv.parent.mkdir(parents=True, exist_ok=True)
+    with results_csv.open("w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "index",
+                "instruction",
+                "output_file_path",
+                "compile_passed",
+                "return_code",
+                "error_count",
+                "compile_log_path",
+                "error",
+            ],
+        )
+        writer.writeheader()
+
+
+def append_result(results_csv: Path, row: dict[str, object]) -> None:
+    with results_csv.open("a", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "index",
+                "instruction",
+                "output_file_path",
+                "compile_passed",
+                "return_code",
+                "error_count",
+                "compile_log_path",
+                "error",
+            ],
+        )
+        writer.writerow(row)
+
+
+def run_evaluation(args: argparse.Namespace) -> None:
+    configure_logging(args.log_level)
+    input_csv = Path(args.input).resolve()
+    output_dir = Path(args.output_dir).resolve()
+    code_dir = output_dir / "code"
+    log_dir = output_dir / "logs"
+    results_csv = Path(args.results_csv).resolve()
+
+    instructions = read_instructions(input_csv, args.instruction_column)
+    if args.limit is not None:
+        instructions = instructions[: args.limit]
+
+    LOGGER.info("Input CSV: %s", input_csv)
+    LOGGER.info("Instruction count: %d", len(instructions))
+    LOGGER.info("Output directory: %s", output_dir)
+    LOGGER.info("Results CSV: %s", results_csv)
+
+    code_dir.mkdir(parents=True, exist_ok=True)
+    log_dir.mkdir(parents=True, exist_ok=True)
+    write_result_header(results_csv)
+
+    client = create_llm_client(args.base_url)
+    compiler = ArkTSCompiler(INDEX_FILE_PATH, resolve_deveco_home(args.deveco_home))
+
     try:
-        df = pd.read_csv(csv_filename)
-    except FileNotFoundError:
-        print(f"Error: File {csv_filename} not found.")
-        return
+        total = len(instructions)
+        for position, item in enumerate(instructions, start=1):
+            row_index = int(item["index"])
+            instruction = item["instruction"]
+            code_path = code_dir / f"{row_index:04d}.ets"
+            log_path = log_dir / f"{row_index:04d}.log"
 
-    _compilerTool = ArkTSCompiler()
+            LOGGER.info("[%d/%d] Start row: csv_row=%d", position, total, row_index)
+            try:
+                code = generate_arkts_code(client, args.model, instruction)
+                code_path.write_text(code, encoding="utf-8")
+                LOGGER.info("[%d/%d] Saved generated code: %s", position, total, code_path)
 
-    for index, row in df.iterrows():
-        instruction = row["Test Instructions"]
-        print(f"Processing instruction {index + 1}/{len(df)}: {instruction}")
+                LOGGER.info("[%d/%d] Compiling generated code: %s", position, total, code_path.name)
+                return_code, compile_message = compiler.compile_code(code)
+                log_path.write_text(compile_message, encoding="utf-8")
+                compile_passed = return_code == 0
+                error_count = 0 if compile_passed else count_errors(compile_message)
+                LOGGER.info("[%d/%d] Saved compile log: %s", position, total, log_path)
 
-        # PASS 1
-        llm_response = get_llm_response(instruction)
-        current_code = extract_code_from_response(llm_response)
-        return_code, error_message = _compilerTool._run(ArkTSCompilerInput(index_code=current_code))
-        df.at[index, "Pass1 Error Count"] = count_errors(error_message) if return_code != 0 else 0
+                append_result(
+                    results_csv,
+                    {
+                        "index": row_index,
+                        "instruction": instruction,
+                        "output_file_path": str(code_path),
+                        "compile_passed": compile_passed,
+                        "return_code": return_code,
+                        "error_count": error_count,
+                        "compile_log_path": str(log_path),
+                        "error": "",
+                    },
+                )
+                status = "PASS" if compile_passed else "FAIL"
+                LOGGER.info(
+                    "[%d/%d] Finished row: status=%s return_code=%s error_count=%s",
+                    position,
+                    total,
+                    status,
+                    return_code,
+                    error_count,
+                )
+            except Exception as exc:
+                append_result(
+                    results_csv,
+                    {
+                        "index": row_index,
+                        "instruction": instruction,
+                        "output_file_path": str(code_path) if code_path.exists() else "",
+                        "compile_passed": False,
+                        "return_code": "",
+                        "error_count": "",
+                        "compile_log_path": str(log_path) if log_path.exists() else "",
+                        "error": str(exc),
+                    },
+                )
+                LOGGER.exception("[%d/%d] Row failed: csv_row=%d error=%s", position, total, row_index, exc)
+                if args.stop_on_error:
+                    raise
+    finally:
+        compiler.restore_original()
 
-        # PASS 2
-        if return_code != 0:
-            enhanced_error = enhance_error_with_source_line(error_message)
-            pass2_prompt = f"{instruction}\n\nHere's my current code with compilation errors:\n\n```\n{current_code}\n```\n\nCompilation errors:\n{enhanced_error}\n\nPlease fix the code."
-            llm_response = get_llm_response(pass2_prompt)
-            current_code = extract_code_from_response(llm_response)
-            return_code, error_message = _compilerTool._run(ArkTSCompilerInput(index_code=current_code))
-            df.at[index, "Pass2 Error Count"] = count_errors(error_message) if return_code != 0 else 0
-        else:
-            df.at[index, "Pass2 Error Count"] = 0
-
-        # PASS 3
-        if return_code != 0:
-            enhanced_error = enhance_error_with_source_line(error_message)
-            pass3_prompt = f"{instruction}\n\nMy code still has compilation errors:\n\n```\n{current_code}\n```\n\nCompilation errors:\n{enhanced_error}\n\nPlease provide a completely fixed version."
-            llm_response = get_llm_response(pass3_prompt)
-            current_code = extract_code_from_response(llm_response)
-            return_code, error_message = _compilerTool._run(ArkTSCompilerInput(index_code=current_code))
-            df.at[index, "Pass3 Error Count"] = count_errors(error_message) if return_code != 0 else 0
-        else:
-            df.at[index, "Pass3 Error Count"] = 0
-
-        df.at[index, df.columns[1]] = current_code
-        df.to_csv(csv_filename, index=False)
-        print(f"Completed instruction {index + 1}/{len(df)}.")
+    LOGGER.info("Evaluation complete. Results: %s", results_csv)
+    LOGGER.info("Generated code files: %s", code_dir)
 
 
-# -------------------------------
-# Main Execution Block
-# -------------------------------
-if __name__ == "__main__":
-    # Example of a single instruction test
-    instruction = (
-        "Show a yellow circle in the center of the screen and write a text underneath "
-        "saying 'shape circle'. The code should be implemented using arkTS language."
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Run sequential ArkTS code-generation and compilation evaluation."
     )
+    parser.add_argument("--input", default="arkTS_test_data.csv", help="Input CSV path.")
+    parser.add_argument(
+        "--instruction-column",
+        default=None,
+        help="Column containing prompts. Defaults to auto-detecting instruction/Test Instructions/prompt.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="evaluation_outputs",
+        help="Directory for generated code files and compile logs.",
+    )
+    parser.add_argument(
+        "--results-csv",
+        default="evaluation_outputs/results.csv",
+        help="CSV file that records prompt, output file path, and compile status.",
+    )
+    parser.add_argument(
+        "--deveco-home",
+        default=None,
+        help="DevEco Studio installation directory. Defaults to DEVECO_HOME or common Windows paths.",
+    )
+    parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="OpenAI-compatible API base URL.")
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="Model name used for generation.")
+    parser.add_argument("--limit", type=int, default=None, help="Only evaluate the first N rows.")
+    parser.add_argument("--stop-on-error", action="store_true", help="Stop instead of continuing after a row error.")
+    parser.add_argument(
+        "--log-level",
+        default="INFO",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR"],
+        help="Console log level.",
+    )
+    return parser.parse_args()
 
-    print("--- Running Single Instruction Test ---")
-    llm_response = send_prompt_to_openai_router(instruction)
-    code = extract_code_from_response(llm_response)
-    print("\nGenerated Code:\n", code)
 
-    # Use the refactored compiler tool
-    compiler_tool = ArkTSCompiler()
-    return_code, message = compiler_tool._run(ArkTSCompilerInput(index_code=code))
-
-    print("\n--- Compilation Result ---")
-    print(f"Return Code: {return_code}")
-    if return_code == 0:
-        print("Build successful!")
-    else:
-        print("\nBuild failed with error:\n", enhance_error_with_source_line(message))
-
+if __name__ == "__main__":
+    run_evaluation(parse_args())

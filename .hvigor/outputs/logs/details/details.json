@@ -2,14 +2,20 @@
   "HVIGOR_OHOS_PLUGIN": {
     "MODULES": [
       {
-        "MODULE_NAME": "1043bfc77febe75fafec0c4309faccf1",
+        "MODULE_NAME": "923fe53966c6cd9343e11af776cd4b05be315ea4b200b02e4d5dfb0f929b73bf",
         "API_TYPE": "stageMode",
+        "INCLUDE_IN_BUILD": true,
+        "IS_COMMAND_LINE_ENTRY_MODULE": true,
+        "MODULE_TYPE": "entry",
         "INCREMENTAL_TASKS": {
           "BUILD_NATIVE_WITH_CMAKE": true,
-          "COMPILE_ARKTS": true
-        }
+          "COMPILE_ARKTS": false
+        },
+        "IS_INCREMENTAL_MODULE": false
       }
     ],
+    "NATIVE_COMPILER": "Default",
+    "IS_FULL_BUILD": true,
     "BUILD_MODE": "debug"
   },
   "HVIGOR": {
@@ -18,21 +24,97 @@
     "IS_PARALLEL": true,
     "IS_HVIGORFILE_TYPE_CHECK": false,
     "TASK_TIME": {
-      "1043bfc77febe75fafec0c4309faccf1": {
-        "ConfigureCmake": 55979833,
-        "PreCheckSyscap": 191125,
-        "ProcessIntegratedHsp": 633959,
-        "BuildNativeWithCmake": 4220958,
-        "SyscapTransform": 15841167,
-        "BuildJS": 1820125,
-        "BuildNativeWithNinja": 901243083
+      "923fe53966c6cd9343e11af776cd4b05be315ea4b200b02e4d5dfb0f929b73bf": {
+        "CreateModuleInfo": 2571900,
+        "ConfigureCmake": 10626000,
+        "PreCheckSyscap": 1260400,
+        "GeneratePkgSdkInfo": 4635200,
+        "ProcessIntegratedHsp": 2992800,
+        "BuildNativeWithCmake": 26284000,
+        "SyscapTransform": 3744600,
+        "ProcessStartupConfig": 3040900,
+        "BuildJS": 3573900,
+        "BuildNativeWithNinja": 322367100
       }
     },
-    "BUILD_ID": "202508021518214680",
-    "ERROR_MESSAGE": {
-      "BUILD_ID": "202508021518214680",
-      "TIMESTAMP": "1754137105412"
+    "APIS": [
+      "getProperty"
+    ],
+    "CONFIG_EXPERIMENT": {
+      "ENABLE_MODULE_SKIP": false,
+      "ENABLE_CPP_FUNCTION_LEVEL_INCREMENTAL": false
     },
-    "TOTAL_TIME": 3944235750
+    "CONFIG_PROPERTIES": {},
+    "TOTAL_TIME": 1582977200,
+    "BUILD_ID": "202606102214249310",
+    "ERROR_MESSAGE": [
+      {
+        "CODE": "10605034",
+        "STACK": "...\n10605034 ArkTS Compiler Error\n...\n10605008 ArkTS Compiler Error\n...\n    at runArkPack (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\ar***k.js:1:5076)\n...\n    at throwArkTsCompilerError (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\data\\co***r.js:1:423)\n    at throwErrorIfHasErrorInfo (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\plugins\\co***n.js:1:4894)\n    at Object.handler (***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-compose\\dist\\src\\plugins\\co***n.js:1:2989)\n    at ***\\tools\\hvigor\\hvigor-ohos-plugin\\node_modules\\@ohos\\hvigor-arkts-base\\node_modules\\rollup\\dist\\shared\\ro***p.js:27864:40",
+        "PROJECT_CONFIG": {
+          "buildMode": "Debug",
+          "compileMode": "esmodule",
+          "moduleType": "entry",
+          "targetName": ".default",
+          "packageManagerType": "ohpm",
+          "isLocalTest": false,
+          "needCoverageInsert": false,
+          "debugLine": false,
+          "compileSdkVersion": 23,
+          "compatibleSdkVersion": 13,
+          "originCompatibleSdkVersion": "5.0.1(13)",
+          "etsLoaderVersion": "6.1.0.105",
+          "etsLoaderReleaseType": "Release",
+          "aotCompileMode": "type",
+          "isCrossplatform": false,
+          "bundleType": "app",
+          "apiVersion": 23,
+          "isFaMode": false,
+          "deviceTypes": [
+            "phone",
+            "tablet",
+            "2in1"
+          ],
+          "integratedHsp": false,
+          "branchElimination": false,
+          "tsImportSendable": false,
+          "resolveConflictMode": true,
+          "useNativeResolver": true,
+          "shouldEmitJs": true,
+          "useTscResolve": false,
+          "singleFileEmit": false,
+          "executionMode": "memory",
+          "isHarDeduplicateEnabled": false,
+          "autoLazyImport": false,
+          "allowEmptyBundleName": false,
+          "reExportCheckMode": "noCheck",
+          "usePathPlaceholder": false,
+          "writeRollupCache": true,
+          "isExpandImportEnabled": false,
+          "ignoreCrossplatformCheck": false,
+          "skipOhModulesLint": false,
+          "enableStrictCheckOHModule": false,
+          "useDeclarationFileSignature": false,
+          "isPreloadSoEnabled": false,
+          "strictMode.caseSensitiveCheck": true,
+          "strictMode.useNormalizedOHMUrl": true,
+          "strictMode.noExternalImportByPath": true,
+          "runtimeOS": "HarmonyOS",
+          "sdkInfo": "false:23:6.1.0.105:Release",
+          "useSourceHash": false,
+          "isByteCodeHarOptimize": false,
+          "copyCodeResourceEnable": true,
+          "uiTransformOptimization": false
+        }
+      },
+      {
+        "CODE": "10605034",
+        "TIMESTAMP": "1781100866499"
+      },
+      {
+        "CODE": "10605008",
+        "TIMESTAMP": "1781100866499"
+      }
+    ]
   }
 }

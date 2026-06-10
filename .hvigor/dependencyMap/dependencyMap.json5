@@ -1,1 +1,1 @@
-{"basePath":"/Users/cem/DevEcoStudioProjects/pycharm_project/.hvigor/dependencyMap/dependencyMap.json5","rootDependency":"./oh-package.json5","dependencyMap":{"entry":"./entry/oh-package.json5"},"modules":[{"name":"entry","srcPath":"../../../entry"}]}
+{"basePath":"D:\\DevEcoStudioProjects\\llm-finetuning-arkts\\.hvigor\\dependencyMap\\dependencyMap.json5","rootDependency":"./oh-package.json5","dependencyMap":{"entry":"./entry/oh-package.json5"},"modules":[{"name":"entry","srcPath":"..\\..\\..\\entry"}]}

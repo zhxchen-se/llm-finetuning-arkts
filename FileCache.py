@@ -40,7 +40,7 @@ class FileCache:
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"The file at path {file_path} does not exist.")
 
-        with open(file_path, 'r') as file:  # No lock for caching
+        with open(file_path, 'r', encoding='utf-8') as file:  # No lock for caching
             self.cache[file_path] = file.read()
             self.cache.move_to_end(file_path)
             if len(self.cache) > self.max_size:
@@ -61,7 +61,7 @@ class FileCache:
 
         self._acquire_lock(file_path)  # Acquire lock before updating
         try:
-            with open(file_path, 'w') as file:
+            with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(new_content)
         finally:
             self._release_lock(file_path)
@@ -79,7 +79,7 @@ class FileCache:
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"The file at path {file_path} does not exist.")
 
-        with open(file_path, 'r') as file:  # No lock for reading
+        with open(file_path, 'r', encoding='utf-8') as file:  # No lock for reading
             return file.read()
 
     def revert_file(self, file_path):
@@ -97,7 +97,7 @@ class FileCache:
 
         self._acquire_lock(file_path)  # Acquire lock before reverting
         try:
-            with open(file_path, 'w') as file:
+            with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(self.cache[file_path])
             del self.cache[file_path]
         finally:
