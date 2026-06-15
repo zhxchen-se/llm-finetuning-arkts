@@ -1,4 +1,5 @@
-import promptAction from '@ohos.promptAction';
+// import promptAction from '@ohos.promptAction';
+import { promptAction } from '@kit.ArkUI';
 
 @Entry
 @Component
@@ -22,28 +23,29 @@ struct Index {
         .height(48)
         .fontSize(16)
         .bindMenu([
-          {
-            value: 'Option 1',
+          MenuItem({
+            content: 'Option 1',
             action: () => {
               this.selectedOption = 'Option 1';
               promptAction.showToast({ message: 'Option 1 selected' });
             }
-          },
-          {
-            value: 'Option 2',
+          }),
+          MenuItem({
+            content: 'Option 2',
             action: () => {
               this.selectedOption = 'Option 2';
               promptAction.showToast({ message: 'Option 2 selected' });
             }
-          },
-          {
-            value: 'Option 3',
+          }),
+          MenuItem({
+            content: 'Option 3',
             action: () => {
               this.selectedOption = 'Option 3';
               promptAction.showToast({ message: 'Option 3 selected' });
             }
-          }
+          })
         ])
+    }
     .width('100%')
     .height('100%')
     .justifyContent(FlexAlign.Center)

@@ -13,3 +13,6 @@ env/
 # PyCharm
 .idea/
 
+# Evaluation outputs
+eval_outputs/
+

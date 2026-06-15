@@ -5,6 +5,7 @@ import os
 import re
 import subprocess
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
@@ -160,6 +161,26 @@ def count_errors(message: str) -> int:
     return message.upper().count("ERROR") if message else 0
 
 
+def sanitize_path_component(value: str) -> str:
+    sanitized = re.sub(r"[^A-Za-z0-9._-]+", "-", value).strip("-._")
+    return sanitized or "model"
+
+
+def model_output_name(model: str) -> str:
+    return model.rsplit("/", 1)[-1]
+
+
+def create_run_output_dir(output_root: Path, model: str) -> Path:
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    run_name = f"{sanitize_path_component(model_output_name(model))}_{timestamp}"
+    output_dir = output_root / run_name
+    suffix = 2
+    while output_dir.exists():
+        output_dir = output_root / f"{run_name}_{suffix}"
+        suffix += 1
+    return output_dir
+
+
 class ArkTSCompiler:
     def __init__(self, index_file_path: Path, deveco_home: Path):
         self.index_file_path = index_file_path.resolve()
@@ -306,10 +327,13 @@ def append_result(results_csv: Path, row: dict[str, object]) -> None:
 def run_evaluation(args: argparse.Namespace) -> None:
     configure_logging(args.log_level)
     input_csv = Path(args.input).resolve()
-    output_dir = Path(args.output_dir).resolve()
+    if args.output_dir:
+        output_dir = Path(args.output_dir).resolve()
+    else:
+        output_dir = create_run_output_dir(Path(args.output_root).resolve(), args.model)
     code_dir = output_dir / "code"
     log_dir = output_dir / "logs"
-    results_csv = Path(args.results_csv).resolve()
+    results_csv = Path(args.results_csv).resolve() if args.results_csv else output_dir / "results.csv"
 
     instructions = read_instructions(input_csv, args.instruction_column)
     if args.limit is not None:
@@ -405,14 +429,22 @@ def parse_args() -> argparse.Namespace:
         help="Column containing prompts. Defaults to auto-detecting instruction/Test Instructions/prompt.",
     )
     parser.add_argument(
+        "--output-root",
+        default="eval_outputs",
+        help="Root directory for automatic run outputs. Defaults to ./eval_outputs.",
+    )
+    parser.add_argument(
         "--output-dir",
-        default="evaluation_outputs",
-        help="Directory for generated code files and compile logs.",
+        default=None,
+        help=(
+            "Optional explicit run output directory. Defaults to "
+            "<output-root>/<model-name>_<YYYYMMDD_HHMMSS>."
+        ),
     )
     parser.add_argument(
         "--results-csv",
-        default="evaluation_outputs/results.csv",
-        help="CSV file that records prompt, output file path, and compile status.",
+        default=None,
+        help="Optional CSV file path. Defaults to <run-output-dir>/results.csv.",
     )
     parser.add_argument(
         "--deveco-home",

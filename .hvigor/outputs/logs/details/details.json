@@ -8,13 +8,13 @@
         "IS_COMMAND_LINE_ENTRY_MODULE": true,
         "MODULE_TYPE": "entry",
         "INCREMENTAL_TASKS": {
-          "BUILD_NATIVE_WITH_CMAKE": true
+          "BUILD_NATIVE_WITH_CMAKE": false
         },
-        "IS_INCREMENTAL_MODULE": true
+        "IS_INCREMENTAL_MODULE": false
       }
     ],
     "NATIVE_COMPILER": "Default",
-    "IS_FULL_BUILD": false,
+    "IS_FULL_BUILD": true,
     "BUILD_MODE": "debug"
   },
   "HVIGOR": {
@@ -24,91 +24,22 @@
     "IS_HVIGORFILE_TYPE_CHECK": false,
     "TASK_TIME": {
       "923fe53966c6cd9343e11af776cd4b05be315ea4b200b02e4d5dfb0f929b73bf": {
-        "CreateModuleInfo": 1541200,
-        "ConfigureCmake": 2173700,
-        "PreCheckSyscap": 1006100,
-        "BuildNativeWithCmake": 27381400,
-        "ProcessStartupConfig": 1951700,
-        "PreviewProcessResource": 2378000,
-        "PreviewHookCompileResource": 384600,
-        "ReplacePreviewerPage": 411700,
-        "buildPreviewerResource": 222800
+        "init": 1212700,
+        "ConfigureCmake": 3544600,
+        "BuildNativeWithCmake": 10034722500,
+        "compileNative": 414300
+      },
+      "APP": {
+        "init": 487300
       }
     },
-    "APIS": [
-      "getProperty"
-    ],
+    "APIS": [],
     "CONFIG_EXPERIMENT": {
       "ENABLE_MODULE_SKIP": false,
       "ENABLE_CPP_FUNCTION_LEVEL_INCREMENTAL": false
     },
     "CONFIG_PROPERTIES": {},
-    "TOTAL_TIME": 9225895400,
-    "BUILD_ID": "202606121213401740",
-    "ERROR_MESSAGE": [
-      {
-        "CODE": "10505001",
-        "STACK": "10505001 ArkTS Compiler Error\n...\n    at handleResponse (***\\tools\\hvigor\\hvigor\\src\\base\\internal\\pool\\worker-pool\\wa***r.js:1:2180)\n    at async Worker.<anonymous> (***\\tools\\hvigor\\hvigor\\src\\base\\internal\\pool\\worker-pool\\wa***r.js:1:4268)",
-        "PROJECT_CONFIG": {
-          "buildMode": "Debug",
-          "compileMode": "esmodule",
-          "moduleType": "entry",
-          "targetName": ".default",
-          "packageManagerType": "ohpm",
-          "isLocalTest": false,
-          "needCoverageInsert": false,
-          "debugLine": false,
-          "compileSdkVersion": 23,
-          "compatibleSdkVersion": 13,
-          "originCompatibleSdkVersion": "5.0.1(13)",
-          "etsLoaderVersion": "6.1.0.105",
-          "etsLoaderReleaseType": "Release",
-          "aotCompileMode": "type",
-          "isCrossplatform": false,
-          "bundleType": "app",
-          "apiVersion": 23,
-          "isFaMode": false,
-          "deviceTypes": [
-            "phone",
-            "tablet",
-            "2in1"
-          ],
-          "integratedHsp": false,
-          "branchElimination": false,
-          "tsImportSendable": false,
-          "resolveConflictMode": true,
-          "useNativeResolver": true,
-          "shouldEmitJs": true,
-          "useTscResolve": false,
-          "singleFileEmit": false,
-          "executionMode": "memory",
-          "isHarDeduplicateEnabled": false,
-          "autoLazyImport": false,
-          "allowEmptyBundleName": false,
-          "reExportCheckMode": "noCheck",
-          "usePathPlaceholder": false,
-          "writeRollupCache": true,
-          "isExpandImportEnabled": false,
-          "ignoreCrossplatformCheck": false,
-          "skipOhModulesLint": false,
-          "enableStrictCheckOHModule": false,
-          "useDeclarationFileSignature": false,
-          "isPreloadSoEnabled": false,
-          "strictMode.caseSensitiveCheck": true,
-          "strictMode.useNormalizedOHMUrl": true,
-          "strictMode.noExternalImportByPath": true,
-          "runtimeOS": "HarmonyOS",
-          "sdkInfo": "false:23:6.1.0.105:Release",
-          "useSourceHash": false,
-          "isByteCodeHarOptimize": false,
-          "copyCodeResourceEnable": true,
-          "uiTransformOptimization": false
-        }
-      },
-      {
-        "CODE": "00000000",
-        "TIMESTAMP": "1781237629386"
-      }
-    ]
+    "BUILD_ID": "202606151144078450",
+    "TOTAL_TIME": 10247482400
   }
 }

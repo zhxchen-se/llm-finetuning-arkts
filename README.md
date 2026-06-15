@@ -52,8 +52,8 @@ The `compiler_tool.py` script serves as the main entry point. It reads instructi
 **To run the syntactic validation:**
 
 ```powershell
-python compiler_tool.py --input arkTS_test_data.csv --output-dir evaluation_outputs --results-csv evaluation_outputs/results.csv
+python compiler_tool.py --input arkTS_test_data.csv
 ```
 
-The evaluation runs each prompt in `arkTS_test_data.csv` sequentially. For every prompt, it saves the generated ArkTS code to `evaluation_outputs/code/`, compiles the code by injecting it into `entry/src/main/ets/pages/Index.ets`, and appends the output path plus compilation result to `evaluation_outputs/results.csv`.
+The evaluation runs each prompt in `arkTS_test_data.csv` sequentially. For every run, it creates an output directory under `eval_outputs/` named with the model suffix and timestamp, for example `eval_outputs/DeepSeek-V4-Pro_20260615_203000/`. It saves generated ArkTS code to that run's `code/` directory, compiles the code by injecting it into `entry/src/main/ets/pages/Index.ets`, writes logs to `logs/`, and appends compilation results to `results.csv`.
 Progress logs are printed to the console with timestamps. Use `--log-level DEBUG`, `INFO`, `WARNING`, or `ERROR` to adjust verbosity.
