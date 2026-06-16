@@ -55,5 +55,19 @@ The `compiler_tool.py` script serves as the main entry point. It reads instructi
 python compiler_tool.py --input arkTS_test_data.csv
 ```
 
+To choose a model explicitly:
+
+```powershell
+python compiler_tool.py --input arkTS_test_data.csv --model "deepseek-ai/DeepSeek-V4-Pro"
+```
+
+After the first full pass, the script checks for rows that failed before a generated code file was produced, including empty LLM responses. Those request failures are retried three times by default; use `--request-retries 5` to change the count.
+
+To evaluate several models sequentially, edit the model list in `run_eval_models.bat`, then run:
+
+```powershell
+.\run_eval_models.bat
+```
+
 The evaluation runs each prompt in `arkTS_test_data.csv` sequentially. For every run, it creates an output directory under `eval_outputs/` named with the model suffix and timestamp, for example `eval_outputs/DeepSeek-V4-Pro_20260615_203000/`. It saves generated ArkTS code to that run's `code/` directory, compiles the code by injecting it into `entry/src/main/ets/pages/Index.ets`, writes logs to `logs/`, and appends compilation results to `results.csv`.
 Progress logs are printed to the console with timestamps. Use `--log-level DEBUG`, `INFO`, `WARNING`, or `ERROR` to adjust verbosity.

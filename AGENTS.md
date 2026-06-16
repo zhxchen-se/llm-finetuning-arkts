@@ -6,8 +6,9 @@ This repository is a DevEco Studio-compatible HarmonyOS project plus an ArkTS co
 
 ## Build, Test, and Development Commands
 
-- `python compiler_tool.py --input arkTS_test_data.csv`: run ArkTS-Test and create `eval_outputs/<model>_<timestamp>/` with `code/`, `logs/`, and `results.csv`.
+- `python compiler_tool.py --input arkTS_test_data.csv`: run ArkTS-Test and create `eval_outputs/<model>_<timestamp>/` with `code/`, `logs/`, and `results.csv`; request failures are retried three times after the first pass.
 - `python compiler_tool.py --input arkTS_test_data.csv --log-level DEBUG`: rerun evaluation with verbose diagnostics.
+- `.\run_eval_models.bat`: run the configured model list sequentially; edit the model names in the batch file before large comparisons.
 - Build and test the HarmonyOS app through DevEco Studio or the project Hvigor task runner configured by `hvigorfile.ts` and `build-profile.json5`. Keep DevEco Studio 4.0+ and HarmonyOS SDK API 9+ available, and set `DEVECO_HOME` when using scripts.
 
 ## Coding Style & Naming Conventions

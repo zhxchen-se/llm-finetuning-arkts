@@ -20,6 +20,16 @@ DEFAULT_MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 PROJECT_ROOT = Path(__file__).resolve().parent
 INDEX_FILE_PATH = PROJECT_ROOT / "entry" / "src" / "main" / "ets" / "pages" / "Index.ets"
 LOGGER = logging.getLogger("arkts_eval")
+RESULT_FIELDS = [
+    "index",
+    "instruction",
+    "output_file_path",
+    "compile_passed",
+    "return_code",
+    "error_count",
+    "compile_log_path",
+    "error",
+]
 
 
 def configure_logging(log_level: str) -> None:
@@ -148,6 +158,8 @@ def generate_arkts_code(client: OpenAI, model: str, instruction: str) -> str:
 
     raw_content = response.choices[0].message.content or ""
     code = extract_code_from_response(raw_content)
+    if not code.strip():
+        raise RuntimeError("LLM returned empty content.")
     LOGGER.info(
         "LLM returned: response_chars=%d code_chars=%d elapsed=%.1fs",
         len(raw_content),
@@ -290,38 +302,33 @@ def read_instructions(input_csv: Path, instruction_column: Optional[str]) -> lis
 def write_result_header(results_csv: Path) -> None:
     results_csv.parent.mkdir(parents=True, exist_ok=True)
     with results_csv.open("w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=[
-                "index",
-                "instruction",
-                "output_file_path",
-                "compile_passed",
-                "return_code",
-                "error_count",
-                "compile_log_path",
-                "error",
-            ],
-        )
+        writer = csv.DictWriter(f, fieldnames=RESULT_FIELDS)
         writer.writeheader()
 
 
 def append_result(results_csv: Path, row: dict[str, object]) -> None:
     with results_csv.open("a", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=[
-                "index",
-                "instruction",
-                "output_file_path",
-                "compile_passed",
-                "return_code",
-                "error_count",
-                "compile_log_path",
-                "error",
-            ],
-        )
+        writer = csv.DictWriter(f, fieldnames=RESULT_FIELDS)
         writer.writerow(row)
+
+
+def write_results(results_csv: Path, rows: list[dict[str, object]]) -> None:
+    results_csv.parent.mkdir(parents=True, exist_ok=True)
+    with results_csv.open("w", newline="", encoding="utf-8-sig") as f:
+        writer = csv.DictWriter(f, fieldnames=RESULT_FIELDS)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def is_request_failure(row: Optional[dict[str, object]]) -> bool:
+    if row is None:
+        return True
+    output_file_path = str(row.get("output_file_path") or "")
+    compile_log_path = str(row.get("compile_log_path") or "")
+    error = str(row.get("error") or "")
+    if output_file_path and not Path(output_file_path).exists() and not compile_log_path:
+        return True
+    return not output_file_path and not compile_log_path and bool(error)
 
 
 def run_evaluation(args: argparse.Namespace) -> None:
@@ -338,6 +345,8 @@ def run_evaluation(args: argparse.Namespace) -> None:
     instructions = read_instructions(input_csv, args.instruction_column)
     if args.limit is not None:
         instructions = instructions[: args.limit]
+    if args.request_retries < 0:
+        raise ValueError("--request-retries must be greater than or equal to 0.")
 
     LOGGER.info("Input CSV: %s", input_csv)
     LOGGER.info("Instruction count: %d", len(instructions))
@@ -351,66 +360,123 @@ def run_evaluation(args: argparse.Namespace) -> None:
     client = create_llm_client(args.base_url)
     compiler = ArkTSCompiler(INDEX_FILE_PATH, resolve_deveco_home(args.deveco_home))
 
+    results_by_index: dict[int, dict[str, object]] = {}
+
+    def ordered_results() -> list[dict[str, object]]:
+        return [
+            results_by_index[int(item["index"])]
+            for item in instructions
+            if int(item["index"]) in results_by_index
+        ]
+
+    def persist_results() -> None:
+        write_results(results_csv, ordered_results())
+
+    def evaluate_item(item: dict[str, str], position_label: str) -> dict[str, object]:
+        row_index = int(item["index"])
+        instruction = item["instruction"]
+        code_path = code_dir / f"{row_index:04d}.ets"
+        log_path = log_dir / f"{row_index:04d}.log"
+
+        LOGGER.info("[%s] Start row: csv_row=%d", position_label, row_index)
+        try:
+            code = generate_arkts_code(client, args.model, instruction)
+            code_path.write_text(code, encoding="utf-8")
+            LOGGER.info("[%s] Saved generated code: %s", position_label, code_path)
+
+            LOGGER.info("[%s] Compiling generated code: %s", position_label, code_path.name)
+            return_code, compile_message = compiler.compile_code(code)
+            log_path.write_text(compile_message, encoding="utf-8")
+            compile_passed = return_code == 0
+            error_count = 0 if compile_passed else count_errors(compile_message)
+            LOGGER.info("[%s] Saved compile log: %s", position_label, log_path)
+
+            row = {
+                "index": row_index,
+                "instruction": instruction,
+                "output_file_path": str(code_path),
+                "compile_passed": compile_passed,
+                "return_code": return_code,
+                "error_count": error_count,
+                "compile_log_path": str(log_path),
+                "error": "",
+            }
+            status = "PASS" if compile_passed else "FAIL"
+            LOGGER.info(
+                "[%s] Finished row: status=%s return_code=%s error_count=%s",
+                position_label,
+                status,
+                return_code,
+                error_count,
+            )
+            return row
+        except Exception as exc:
+            row = {
+                "index": row_index,
+                "instruction": instruction,
+                "output_file_path": str(code_path) if code_path.exists() else "",
+                "compile_passed": False,
+                "return_code": "",
+                "error_count": "",
+                "compile_log_path": str(log_path) if log_path.exists() else "",
+                "error": str(exc),
+            }
+            LOGGER.exception("[%s] Row failed: csv_row=%d error=%s", position_label, row_index, exc)
+            return row
+
     try:
         total = len(instructions)
         for position, item in enumerate(instructions, start=1):
             row_index = int(item["index"])
-            instruction = item["instruction"]
-            code_path = code_dir / f"{row_index:04d}.ets"
-            log_path = log_dir / f"{row_index:04d}.log"
+            row = evaluate_item(item, f"{position}/{total}")
+            results_by_index[row_index] = row
+            persist_results()
+            if row["error"] and args.stop_on_error:
+                raise RuntimeError(str(row["error"]))
 
-            LOGGER.info("[%d/%d] Start row: csv_row=%d", position, total, row_index)
-            try:
-                code = generate_arkts_code(client, args.model, instruction)
-                code_path.write_text(code, encoding="utf-8")
-                LOGGER.info("[%d/%d] Saved generated code: %s", position, total, code_path)
+        request_failed_items = [
+            item
+            for item in instructions
+            if is_request_failure(results_by_index.get(int(item["index"])))
+        ]
+        LOGGER.info(
+            "Post-run output check: total=%d request_failures=%d",
+            total,
+            len(request_failed_items),
+        )
 
-                LOGGER.info("[%d/%d] Compiling generated code: %s", position, total, code_path.name)
-                return_code, compile_message = compiler.compile_code(code)
-                log_path.write_text(compile_message, encoding="utf-8")
-                compile_passed = return_code == 0
-                error_count = 0 if compile_passed else count_errors(compile_message)
-                LOGGER.info("[%d/%d] Saved compile log: %s", position, total, log_path)
+        for retry_round in range(1, args.request_retries + 1):
+            if not request_failed_items:
+                break
+            LOGGER.info(
+                "Retrying request failures: attempt=%d/%d count=%d",
+                retry_round,
+                args.request_retries,
+                len(request_failed_items),
+            )
+            remaining_items = []
+            for retry_position, item in enumerate(request_failed_items, start=1):
+                row_index = int(item["index"])
+                row = evaluate_item(
+                    item,
+                    f"retry {retry_round}/{args.request_retries} {retry_position}/{len(request_failed_items)}",
+                )
+                if is_request_failure(row):
+                    remaining_items.append(item)
+                    row["error"] = (
+                        f"Request failed after retry {retry_round}/{args.request_retries}: "
+                        f"{row['error']}"
+                    )
+                results_by_index[row_index] = row
+                persist_results()
+            request_failed_items = remaining_items
 
-                append_result(
-                    results_csv,
-                    {
-                        "index": row_index,
-                        "instruction": instruction,
-                        "output_file_path": str(code_path),
-                        "compile_passed": compile_passed,
-                        "return_code": return_code,
-                        "error_count": error_count,
-                        "compile_log_path": str(log_path),
-                        "error": "",
-                    },
-                )
-                status = "PASS" if compile_passed else "FAIL"
-                LOGGER.info(
-                    "[%d/%d] Finished row: status=%s return_code=%s error_count=%s",
-                    position,
-                    total,
-                    status,
-                    return_code,
-                    error_count,
-                )
-            except Exception as exc:
-                append_result(
-                    results_csv,
-                    {
-                        "index": row_index,
-                        "instruction": instruction,
-                        "output_file_path": str(code_path) if code_path.exists() else "",
-                        "compile_passed": False,
-                        "return_code": "",
-                        "error_count": "",
-                        "compile_log_path": str(log_path) if log_path.exists() else "",
-                        "error": str(exc),
-                    },
-                )
-                LOGGER.exception("[%d/%d] Row failed: csv_row=%d error=%s", position, total, row_index, exc)
-                if args.stop_on_error:
-                    raise
+        if request_failed_items:
+            LOGGER.warning(
+                "Request failures remain after retries: count=%d rows=%s",
+                len(request_failed_items),
+                ",".join(item["index"] for item in request_failed_items),
+            )
     finally:
         compiler.restore_original()
 
@@ -438,7 +504,7 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help=(
             "Optional explicit run output directory. Defaults to "
-            "<output-root>/<model-name>_<YYYYMMDD_HHMMSS>."
+            "<output-root>/<model-suffix>_<YYYYMMDD_HHMMSS>."
         ),
     )
     parser.add_argument(
@@ -454,6 +520,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="OpenAI-compatible API base URL.")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Model name used for generation.")
     parser.add_argument("--limit", type=int, default=None, help="Only evaluate the first N rows.")
+    parser.add_argument(
+        "--request-retries",
+        type=int,
+        default=3,
+        help="Retry request failures after the first full pass. Defaults to 3.",
+    )
     parser.add_argument("--stop-on-error", action="store_true", help="Stop instead of continuing after a row error.")
     parser.add_argument(
         "--log-level",
