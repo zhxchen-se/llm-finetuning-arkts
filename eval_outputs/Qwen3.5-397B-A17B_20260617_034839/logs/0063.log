@@ -1,0 +1,110 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 10 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 5 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 45 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+[33m "@ohos/arkui" is imported by "entry/src/main/ets/pages/Index.ets", but could not be resolved – treating it as an external dependency. [39m
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m[39m
+> hvigor [91mERROR: ArkTS Compiler Error
+[31m1 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:45:14
+[39m
+[39m
+[31m2 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:51:16
+[39m
+[39m
+[31m3 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:57:7
+[39m
+[39m
+[31m4 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:69:5
+[39m
+[39m
+[31m5 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find module '@ohos/arkui' or its corresponding type declarations. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:1:66
+[39m
+[39m
+[31m6 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Column' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:45:5
+[39m
+[39m
+[31m7 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Text' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:7
+[39m
+[39m
+[31m8 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Column' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:51:7
+[39m
+[39m
+[31m9 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Image' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:52:9
+[39m
+[39m
+[31m10 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: This expression is not callable.
+  Type 'String' has no call signatures. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:57:8
+[39m
+[39m
+[31m11 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Text' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:64:7
+[39m
+[39m
+[31m12 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: This expression is not callable.
+  Type 'String' has no call signatures. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:69:6
+[39m
+[39m
+[31m13 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'this.buildDemoItem('Contain', ImageFit.Contain, '200vp', '200vp', 'Square Container')' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:17:9
+[39m
+[39m
+[31m14 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'this.buildDemoItem('Cover', ImageFit.Cover, '200vp', '300vp', 'Tall Container')' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:20:9
+[39m
+[39m
+[31m15 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'this.buildDemoItem('Fill', ImageFit.Fill, '300vp', '150vp', 'Wide Container')' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:23:9
+[39m
+[39m
+[31m16 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'this.buildDemoItem('None', ImageFit.None, '150vp', '150vp', 'Small Container')' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:26:9
+[39m
+[39m
+[31m17 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'this.buildDemoItem('ScaleDown', ImageFit.ScaleDown, '250vp', '250vp', 'Medium Container')' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:29:9
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:18 WARN:1}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 753 ms [39m

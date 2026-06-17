@@ -1,0 +1,78 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 9 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 46 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m[39m
+> hvigor [91mERROR: 00305015 Rollup Error
+Error Message: Unexpected token (Note that you need plugins to import files that are not JavaScript)
+. At file: D:\DevEcoStudioProjects\llm-finetuning-arkts\entry\src\main\ets\pages\Index.ets:21
+[31m1 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: '(' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:12:11
+[39m
+[39m
+[31m2 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:23:7
+[39m
+[39m
+[31m3 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: '(' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:23:11
+[39m
+[39m
+[31m4 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:35:7
+[39m
+[39m
+[31m5 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:39:7
+[39m
+[39m
+[31m6 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:98:5
+[39m
+[39m
+[31m7 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'richText'. Did you mean 'RichText'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:12:12
+[39m
+[39m
+[31m8 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'TextAttribute' is not assignable to parameter of type 'TextOptions'.
+  Property 'controller' is missing in type 'TextAttribute' but required in type 'TextOptions'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:23:7
+[39m
+[39m
+[31m9 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Expected 0-2 arguments, but got 3. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:39:7
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:10 WARN:1}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 766 ms [39m

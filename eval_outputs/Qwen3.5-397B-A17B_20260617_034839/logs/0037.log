@@ -1,0 +1,156 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 10 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 3 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 54 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN: For details about ArkTS syntax errors, see FAQs[39m[39m
+[33m2 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33m3 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:168:5
+ 'animateTo' has been deprecated.
+[39m[39m
+[33m4 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:188:5
+ 'animateTo' has been deprecated.
+[39m[39m[39m
+> hvigor [91mERROR: ArkTS Compiler Error
+[31m1 ERROR: [31m10605040 ArkTS Compiler Error
+Error Message: Object literals cannot be used as type declarations (arkts-no-obj-literals-as-types) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:20:18
+[39m
+[39m
+[31m2 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:20:45
+[39m
+[39m
+[31m3 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:28:49
+[39m
+[39m
+[31m4 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:30:13
+[39m
+[39m
+[31m5 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:30:48
+[39m
+[39m
+[31m6 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:32:15
+[39m
+[39m
+[31m7 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:111:37
+[39m
+[39m
+[31m8 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:140:31
+[39m
+[39m
+[31m9 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:169:21
+[39m
+[39m
+[31m10 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:176:21
+[39m
+[39m
+[31m11 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:189:21
+[39m
+[39m
+[31m12 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@ohos.base"' has no exported member 'promptAction'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:1:10
+[39m
+[39m
+[31m13 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'offset' in type 'Index' is not assignable to the same property in base type 'CustomComponent'.
+  Type '{ x: number; y: number; }' is not assignable to type '(value: Position | Edges | LocalizedEdges) => CommonAttribute'.
+    Type '{ x: number; y: number; }' provides no match for the signature '(value: Position | Edges | LocalizedEdges): CommonAttribute'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:20:10
+[39m
+[39m
+[31m14 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'rotate' in type 'Index' is not assignable to the same property in base type 'CustomComponent'.
+  Type 'number' is not assignable to type '{ (value: RotateOptions): CommonAttribute; (options: RotateOptions): CommonAttribute; (options: RotateOptions | RotateAngleOptions): CommonAttribute; }'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:21:10
+[39m
+[39m
+[31m15 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'getContext' does not exist on type 'Index'. Did you mean 'getUIContext'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:28:29
+[39m
+[39m
+[31m16 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'getContext' does not exist on type 'Index'. Did you mean 'getUIContext'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:30:28
+[39m
+[39m
+[31m17 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: No overload matches this call.
+  Overload 1 of 3, '(value: RotateOptions): TextAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions'.
+      Type 'number' is not assignable to type 'RotateOptions'.
+  Overload 2 of 3, '(options: RotateOptions): TextAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions'.
+      Type 'number' is not assignable to type 'RotateOptions'.
+  Overload 3 of 3, '(options: RotateOptions | RotateAngleOptions): TextAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions | RotateAngleOptions'.
+      Type 'number' is not assignable to type 'RotateOptions | RotateAngleOptions'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:73:19
+[39m
+[39m
+[31m18 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: No overload matches this call.
+  Overload 1 of 3, '(value: RotateOptions): ColumnAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions'.
+  Overload 2 of 3, '(options: RotateOptions): ColumnAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions'.
+  Overload 3 of 3, '(options: RotateOptions | RotateAngleOptions): ColumnAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions | RotateAngleOptions'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:87:13
+[39m
+[39m
+[31m19 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'gesture' does not exist on type 'void'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:104:16
+[39m
+[39m
+[31m20 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'finally' does not exist on type 'void'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:172:8
+[39m
+[39m
+[31m21 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'Spring' does not exist on type 'typeof Curve'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:188:45
+[39m
+[39m
+[31m22 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'finally' does not exist on type 'void'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:192:8
+[39m
+[39m
+[31m23 ERROR: [31m10905209 ArkTS Compiler Error
+Error Message: Only UI component syntax can be written here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:102:13
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:24 WARN:4}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 1 s 28 ms [39m

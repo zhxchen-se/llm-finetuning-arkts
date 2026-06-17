@@ -1,0 +1,216 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 2 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 10 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 3 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 51 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+[33m "@kit.ArkIO" is imported by "entry/src/main/ets/pages/Index.ets", but could not be resolved – treating it as an external dependency. [39m
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN: For details about ArkTS syntax errors, see FAQs[39m[39m
+[33m2 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33m3 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:373:23
+ 'getContext' has been deprecated.
+[39m[39m[39m
+> hvigor [91mERROR: ArkTS Compiler Error
+[31m1 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:412:13
+[39m
+[39m
+[31m2 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:433:11
+[39m
+[39m
+[31m3 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:473:31
+[39m
+[39m
+[31m4 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'AlignItems'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:2:3
+[39m
+[39m
+[31m5 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'Column'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:4:3
+[39m
+[39m
+[31m6 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'FlexAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:5:3
+[39m
+[39m
+[31m7 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'FontWeight'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:6:3
+[39m
+[39m
+[31m8 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'Image'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:7:3
+[39m
+[39m
+[31m9 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'ImageFit'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:8:3
+[39m
+[39m
+[31m10 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'Row'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:9:3
+[39m
+[39m
+[31m11 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'Scroll'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:10:3
+[39m
+[39m
+[31m12 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'Text'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:11:3
+[39m
+[39m
+[31m13 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'TextAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:12:3
+[39m
+[39m
+[31m14 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find module '@kit.ArkIO' or its corresponding type declarations. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:15:24
+[39m
+[39m
+[31m15 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkGraphics2D"' has no exported member 'image'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:16:10
+[39m
+[39m
+[31m16 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:2:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'AlignItems' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m17 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:4:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'Column' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m18 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:5:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'FlexAlign' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m19 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:6:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'FontWeight' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m20 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:7:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'Image' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m21 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:8:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'ImageFit' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m22 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:9:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'Row' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m23 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:10:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'Scroll' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m24 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:11:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'Text' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m25 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:12:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'TextAlign' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m26 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:15:1
+ ERROR Code: 10311003 ArkTS: ERROR
+Error Message: Kit '@kit.ArkIO' has no corresponding config file in ArkTS SDK.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m27 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:16:10
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'image' is not exported from Kit '@kit.ArkGraphics2D'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m28 ERROR: [31m10903329 ArkTS Compiler Error
+Error Message: Unknown resource name 'icon'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:206:18
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:29 WARN:3}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 2 s 78 ms [39m

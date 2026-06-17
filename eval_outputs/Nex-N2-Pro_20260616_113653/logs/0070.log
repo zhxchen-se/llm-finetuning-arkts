@@ -1,0 +1,130 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 10 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 51 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m[39m
+> hvigor [91mERROR: ArkTS Compiler Error
+[31m1 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: '"@kit.ArkUI"' has no exported member named 'animateTo'. Did you mean 'Animator'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:2:3
+[39m
+[39m
+[31m2 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: '"@kit.ArkUI"' has no exported member named 'Curve'. Did you mean 'curves'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:3:3
+[39m
+[39m
+[31m3 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'FlexAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:4:3
+[39m
+[39m
+[31m4 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'FontWeight'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:5:3
+[39m
+[39m
+[31m5 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'HorizontalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:6:3
+[39m
+[39m
+[31m6 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'TextOverflow'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:7:3
+[39m
+[39m
+[31m7 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module '"@kit.ArkUI"' has no exported member 'VerticalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:8:3
+[39m
+[39m
+[31m8 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:2:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'animateTo' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m9 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:3:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'Curve' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m10 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:4:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'FlexAlign' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m11 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:5:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'FontWeight' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m12 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:6:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'HorizontalAlign' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m13 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:7:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'TextOverflow' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31m14 ERROR: [31mArkTS:ERROR File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:8:3
+ ERROR Code: 10311006 ArkTS: ERROR
+Error Message: 'VerticalAlign' is not exported from Kit '@kit.ArkUI'.
+
+* Try the following: 
+  > Please make sure the Kit apis are consistent with SDK and there's no local modification on Kit apis.
+  > For more details on Kit apis, please refer to https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/development-intro-api-V5.
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:15 WARN:1}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 2 s 102 ms [39m

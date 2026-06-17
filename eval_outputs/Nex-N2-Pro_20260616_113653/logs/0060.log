@@ -1,0 +1,350 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 11 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 3 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 63 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN: For details about ArkTS syntax errors, see FAQs[39m[39m
+[33m2 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m[39m
+> hvigor [91mERROR: 00305015 Rollup Error
+Error Message: Unexpected token (Note that you need plugins to import files that are not JavaScript)
+. At file: D:\DevEcoStudioProjects\llm-finetuning-arkts\entry\src\main\ets\pages\Index.ets:195
+[31m1 ERROR: [31m10605040 ArkTS Compiler Error
+Error Message: Object literals cannot be used as type declarations (arkts-no-obj-literals-as-types) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:11:13
+[39m
+[39m
+[31m2 ERROR: [31m10605043 ArkTS Compiler Error
+Error Message: Array literals must contain elements of only inferrable types (arkts-no-noninferrable-arr-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:254:46
+[39m
+[39m
+[31m3 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:255:5
+[39m
+[39m
+[31m4 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:255:51
+[39m
+[39m
+[31m5 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:256:5
+[39m
+[39m
+[31m6 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:256:52
+[39m
+[39m
+[31m7 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:257:5
+[39m
+[39m
+[31m8 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:257:49
+[39m
+[39m
+[31m9 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:258:5
+[39m
+[39m
+[31m10 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:258:54
+[39m
+[39m
+[31m11 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:5
+[39m
+[39m
+[31m12 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:55
+[39m
+[39m
+[31m13 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:260:5
+[39m
+[39m
+[31m14 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:260:52
+[39m
+[39m
+[31m15 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:261:5
+[39m
+[39m
+[31m16 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:261:54
+[39m
+[39m
+[31m17 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:262:5
+[39m
+[39m
+[31m18 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:262:55
+[39m
+[39m
+[31m19 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:263:5
+[39m
+[39m
+[31m20 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:263:52
+[39m
+[39m
+[31m21 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: No overload matches this call.
+  Overload 1 of 3, '(value: RotateOptions): RowAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions'.
+  Overload 2 of 3, '(options: RotateOptions): RowAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions'.
+  Overload 3 of 3, '(options: RotateOptions | RotateAngleOptions): RowAttribute', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type 'RotateOptions | RotateAngleOptions'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:47:19
+[39m
+[39m
+[31m22 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'HorizontalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:64:21
+[39m
+[39m
+[31m23 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'align' in type 'CalculatedTile' is not assignable to the same property in base type 'CustomComponent'.
+  Type 'AlignItem' is not assignable to type '{ (value: Alignment): CommonAttribute; (alignment: Alignment | LocalizedAlignment): CommonAttribute; }'.
+    Type 'AlignItem' provides no match for the signature '(value: Alignment): CommonAttribute'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:77:9
+[39m
+[39m
+[31m24 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FILL' does not exist on type 'typeof ImageFit'. Did you mean 'Fill'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:89:26
+[39m
+[39m
+[31m25 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'NONE' does not exist on type 'typeof ImageFit'. Did you mean 'None'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:99:26
+[39m
+[39m
+[31m26 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FIT_WIDTH' does not exist on type 'typeof ImageFit'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:109:26
+[39m
+[39m
+[31m27 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FIT_HEIGHT' does not exist on type 'typeof ImageFit'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:120:26
+[39m
+[39m
+[31m28 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CONTAIN' does not exist on type 'typeof ImageFit'. Did you mean 'Contain'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:132:26
+[39m
+[39m
+[31m29 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'START' does not exist on type 'typeof HorizontalAlign'. Did you mean 'Start'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:153:35
+[39m
+[39m
+[31m30 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'END' does not exist on type 'typeof HorizontalAlign'. Did you mean 'End'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:156:35
+[39m
+[39m
+[31m31 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'TOP' does not exist on type 'typeof VerticalAlign'. Did you mean 'Top'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:163:33
+[39m
+[39m
+[31m32 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'BOTTOM' does not exist on type 'typeof VerticalAlign'. Did you mean 'Bottom'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:166:33
+[39m
+[39m
+[31m33 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'HorizontalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:197:19
+[39m
+[39m
+[31m34 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CONTAIN' does not exist on type 'typeof ImageFit'. Did you mean 'Contain'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:219:21
+[39m
+[39m
+[31m35 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'COVER' does not exist on type 'typeof ImageFit'. Did you mean 'Cover'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:225:21
+[39m
+[39m
+[31m36 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FIT_WIDTH' does not exist on type 'typeof ImageFit'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:231:21
+[39m
+[39m
+[31m37 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FIT_HEIGHT' does not exist on type 'typeof ImageFit'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:237:21
+[39m
+[39m
+[31m38 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FILL' does not exist on type 'typeof ImageFit'. Did you mean 'Fill'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:243:21
+[39m
+[39m
+[31m39 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'NONE' does not exist on type 'typeof ImageFit'. Did you mean 'None'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:249:21
+[39m
+[39m
+[31m40 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'START' does not exist on type 'typeof HorizontalAlign'. Did you mean 'Start'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:255:81
+[39m
+[39m
+[31m41 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'TOP' does not exist on type 'typeof VerticalAlign'. Did you mean 'Top'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:255:112
+[39m
+[39m
+[31m42 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CENTER' does not exist on type 'typeof HorizontalAlign'. Did you mean 'Center'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:256:82
+[39m
+[39m
+[31m43 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'TOP' does not exist on type 'typeof VerticalAlign'. Did you mean 'Top'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:256:114
+[39m
+[39m
+[31m44 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'END' does not exist on type 'typeof HorizontalAlign'. Did you mean 'End'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:257:79
+[39m
+[39m
+[31m45 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'TOP' does not exist on type 'typeof VerticalAlign'. Did you mean 'Top'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:257:108
+[39m
+[39m
+[31m46 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'START' does not exist on type 'typeof HorizontalAlign'. Did you mean 'Start'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:258:84
+[39m
+[39m
+[31m47 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CENTER' does not exist on type 'typeof VerticalAlign'. Did you mean 'Center'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:258:115
+[39m
+[39m
+[31m48 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CENTER' does not exist on type 'typeof HorizontalAlign'. Did you mean 'Center'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:85
+[39m
+[39m
+[31m49 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CENTER' does not exist on type 'typeof VerticalAlign'. Did you mean 'Center'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:117
+[39m
+[39m
+[31m50 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'END' does not exist on type 'typeof HorizontalAlign'. Did you mean 'End'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:260:82
+[39m
+[39m
+[31m51 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CENTER' does not exist on type 'typeof VerticalAlign'. Did you mean 'Center'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:260:111
+[39m
+[39m
+[31m52 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'START' does not exist on type 'typeof HorizontalAlign'. Did you mean 'Start'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:261:84
+[39m
+[39m
+[31m53 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'BOTTOM' does not exist on type 'typeof VerticalAlign'. Did you mean 'Bottom'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:261:115
+[39m
+[39m
+[31m54 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CENTER' does not exist on type 'typeof HorizontalAlign'. Did you mean 'Center'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:262:85
+[39m
+[39m
+[31m55 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'BOTTOM' does not exist on type 'typeof VerticalAlign'. Did you mean 'Bottom'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:262:117
+[39m
+[39m
+[31m56 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'END' does not exist on type 'typeof HorizontalAlign'. Did you mean 'End'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:263:82
+[39m
+[39m
+[31m57 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'BOTTOM' does not exist on type 'typeof VerticalAlign'. Did you mean 'Bottom'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:263:111
+[39m
+[39m
+[31m58 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FILL' does not exist on type 'typeof ImageFit'. Did you mean 'Fill'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:320:26
+[39m
+[39m
+[31m59 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'NONE' does not exist on type 'typeof ImageFit'. Did you mean 'None'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:330:26
+[39m
+[39m
+[31m60 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FIT_WIDTH' does not exist on type 'typeof ImageFit'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:340:26
+[39m
+[39m
+[31m61 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'FIT_HEIGHT' does not exist on type 'typeof ImageFit'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:351:26
+[39m
+[39m
+[31m62 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'CONTAIN' does not exist on type 'typeof ImageFit'. Did you mean 'Contain'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:26
+[39m
+[39m
+[31m63 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'HorizontalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:397:19
+[39m
+[39m
+[31m64 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'HorizontalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:451:23
+[39m
+[39m
+[31m65 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'HorizontalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:469:27
+[39m
+[39m
+[31m66 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'VerticalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:480:25
+[39m
+[39m
+[31m67 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'objectPosition' does not exist on type 'ImageAttribute'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:487:16
+[39m
+[39m
+[31m68 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'gap' does not exist on type 'FlexAttribute'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:550:14
+[39m
+[39m
+[31m69 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'gap' does not exist on type 'FlexAttribute'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:572:14
+[39m
+[39m
+[31m70 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'gap' does not exist on type 'FlexAttribute'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:604:14
+[39m
+[39m
+[31m71 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'VerticalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:632:25
+[39m
+[39m
+[31m72 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type 'ItemAlign' is not assignable to parameter of type 'VerticalAlign'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:737:25
+[39m
+[39m
+[31m73 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Property 'gap' does not exist on type 'FlexAttribute'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:745:14
+[39m
+[39m
+[31m74 ERROR: [31m10905210 ArkTS Compiler Error
+Error Message: In an '@Entry' decorated component, the 'build' method can have only one root node, which must be a container component. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:172:12
+[39m
+[39m
+[31m75 ERROR: [31m10905210 ArkTS Compiler Error
+Error Message: In an '@Entry' decorated component, the 'build' method can have only one root node, which must be a container component. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:426:12
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:76 WARN:2}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 1 s 911 ms [39m

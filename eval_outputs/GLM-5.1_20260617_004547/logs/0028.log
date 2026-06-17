@@ -1,0 +1,966 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 11 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 48 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN: For details about ArkTS syntax errors, see FAQs[39m[39m
+[33m2 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m[39m
+> hvigor [91mERROR: 00305015 Rollup Error
+Error Message: Unexpected token (Note that you need plugins to import files that are not JavaScript)
+. At file: D:\DevEcoStudioProjects\llm-finetuning-arkts\entry\src\main\ets\pages\Index.ets:259
+[31m1 ERROR: [31m10605043 ArkTS Compiler Error
+Error Message: Array literals must contain elements of only inferrable types (arkts-no-noninferrable-arr-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:61
+[39m
+[39m
+[31m2 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:63
+[39m
+[39m
+[31m3 ERROR: [31m10605043 ArkTS Compiler Error
+Error Message: Array literals must contain elements of only inferrable types (arkts-no-noninferrable-arr-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:22
+[39m
+[39m
+[31m4 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:24
+[39m
+[39m
+[31m5 ERROR: [31m10605043 ArkTS Compiler Error
+Error Message: Array literals must contain elements of only inferrable types (arkts-no-noninferrable-arr-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:22
+[39m
+[39m
+[31m6 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:24
+[39m
+[39m
+[31m7 ERROR: [31m10605001 ArkTS Compiler Error
+Error Message: Objects with property names that are not identifiers are not supported (arkts-identifiers-as-prop-names) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:25
+[39m
+[39m
+[31m8 ERROR: [31m10605071 ArkTS Compiler Error
+Error Message: The comma operator "," is supported only in "for" loops (arkts-no-comma-outside-loops) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:26
+[39m
+[39m
+[31m9 ERROR: [31m10605071 ArkTS Compiler Error
+Error Message: The comma operator "," is supported only in "for" loops (arkts-no-comma-outside-loops) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:26
+[39m
+[39m
+[31m10 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:39
+[39m
+[39m
+[31m11 ERROR: [31m10605043 ArkTS Compiler Error
+Error Message: Array literals must contain elements of only inferrable types (arkts-no-noninferrable-arr-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:25
+[39m
+[39m
+[31m12 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:27
+[39m
+[39m
+[31m13 ERROR: [31m10605001 ArkTS Compiler Error
+Error Message: Objects with property names that are not identifiers are not supported (arkts-identifiers-as-prop-names) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:28
+[39m
+[39m
+[31m14 ERROR: [31m10605071 ArkTS Compiler Error
+Error Message: The comma operator "," is supported only in "for" loops (arkts-no-comma-outside-loops) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m15 ERROR: [31m10605071 ArkTS Compiler Error
+Error Message: The comma operator "," is supported only in "for" loops (arkts-no-comma-outside-loops) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m16 ERROR: [31m10605071 ArkTS Compiler Error
+Error Message: The comma operator "," is supported only in "for" loops (arkts-no-comma-outside-loops) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m17 ERROR: [31m10605071 ArkTS Compiler Error
+Error Message: The comma operator "," is supported only in "for" loops (arkts-no-comma-outside-loops) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m18 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:51
+[39m
+[39m
+[31m19 ERROR: [31m10605043 ArkTS Compiler Error
+Error Message: Array literals must contain elements of only inferrable types (arkts-no-noninferrable-arr-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:27
+[39m
+[39m
+[31m20 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:29
+[39m
+[39m
+[31m21 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module declaration names may only use ' or " quoted strings. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:1:3
+[39m
+[39m
+[31m22 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:13
+[39m
+[39m
+[31m23 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:25
+[39m
+[39m
+[31m24 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:27
+[39m
+[39m
+[31m25 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:39
+[39m
+[39m
+[31m26 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:48
+[39m
+[39m
+[31m27 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:92:11
+[39m
+[39m
+[31m28 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:92:22
+[39m
+[39m
+[31m29 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:92:24
+[39m
+[39m
+[31m30 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:148:13
+[39m
+[39m
+[31m31 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:148:18
+[39m
+[39m
+[31m32 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:21
+[39m
+[39m
+[31m33 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:37
+[39m
+[39m
+[31m34 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:46
+[39m
+[39m
+[31m35 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:58
+[39m
+[39m
+[31m36 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:66
+[39m
+[39m
+[31m37 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:186:29
+[39m
+[39m
+[31m38 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:186:35
+[39m
+[39m
+[31m39 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:186:37
+[39m
+[39m
+[31m40 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:203:18
+[39m
+[39m
+[31m41 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:241:15
+[39m
+[39m
+[31m42 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:241:22
+[39m
+[39m
+[31m43 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:15
+[39m
+[39m
+[31m44 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:44
+[39m
+[39m
+[31m45 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:46
+[39m
+[39m
+[31m46 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Expression expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:55
+[39m
+[39m
+[31m47 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:64
+[39m
+[39m
+[31m48 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:66
+[39m
+[39m
+[31m49 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:15
+[39m
+[39m
+[31m50 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:22
+[39m
+[39m
+[31m51 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Expression expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:31
+[39m
+[39m
+[31m52 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:36
+[39m
+[39m
+[31m53 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:42
+[39m
+[39m
+[31m54 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Expression expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:62
+[39m
+[39m
+[31m55 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:69
+[39m
+[39m
+[31m56 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ')' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:73
+[39m
+[39m
+[31m57 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:76
+[39m
+[39m
+[31m58 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:78
+[39m
+[39m
+[31m59 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:82
+[39m
+[39m
+[31m60 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:291:15
+[39m
+[39m
+[31m61 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:291:25
+[39m
+[39m
+[31m62 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:308:17
+[39m
+[39m
+[31m63 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:308:36
+[39m
+[39m
+[31m64 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:309:17
+[39m
+[39m
+[31m65 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:309:32
+[39m
+[39m
+[31m66 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:310:17
+[39m
+[39m
+[31m67 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:310:47
+[39m
+[39m
+[31m68 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:311:17
+[39m
+[39m
+[31m69 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:311:35
+[39m
+[39m
+[31m70 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:15
+[39m
+[39m
+[31m71 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:22
+[39m
+[39m
+[31m72 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:29
+[39m
+[39m
+[31m73 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:39
+[39m
+[39m
+[31m74 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Expression expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:48
+[39m
+[39m
+[31m75 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:57
+[39m
+[39m
+[31m76 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:63
+[39m
+[39m
+[31m77 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:80
+[39m
+[39m
+[31m78 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:85
+[39m
+[39m
+[31m79 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:330:15
+[39m
+[39m
+[31m80 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:330:43
+[39m
+[39m
+[31m81 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:330:45
+[39m
+[39m
+[31m82 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:17
+[39m
+[39m
+[31m83 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:24
+[39m
+[39m
+[31m84 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:30
+[39m
+[39m
+[31m85 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module declaration names may only use ' or " quoted strings. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:56
+[39m
+[39m
+[31m86 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: '(' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:18
+[39m
+[39m
+[31m87 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:20
+[39m
+[39m
+[31m88 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Expression expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:43
+[39m
+[39m
+[31m89 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Expression expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:45
+[39m
+[39m
+[31m90 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: '(' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:50
+[39m
+[39m
+[31m91 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:62
+[39m
+[39m
+[31m92 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:64
+[39m
+[39m
+[31m93 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:17
+[39m
+[39m
+[31m94 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:24
+[39m
+[39m
+[31m95 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ':' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:34
+[39m
+[39m
+[31m96 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module declaration names may only use ' or " quoted strings. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:64
+[39m
+[39m
+[31m97 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:27
+[39m
+[39m
+[31m98 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ':' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:43
+[39m
+[39m
+[31m99 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Module declaration names may only use ' or " quoted strings. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:81
+[39m
+[39m
+[31m100 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:364:25
+[39m
+[39m
+[31m101 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:365:17
+[39m
+[39m
+[31m102 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:365:23
+[39m
+[39m
+[31m103 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:366:17
+[39m
+[39m
+[31m104 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:366:23
+[39m
+[39m
+[31m105 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:367:17
+[39m
+[39m
+[31m106 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:367:24
+[39m
+[39m
+[31m107 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:377:15
+[39m
+[39m
+[31m108 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:377:27
+[39m
+[39m
+[31m109 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:386:15
+[39m
+[39m
+[31m110 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:386:23
+[39m
+[39m
+[31m111 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:405:17
+[39m
+[39m
+[31m112 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:21
+[39m
+[39m
+[31m113 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:60
+[39m
+[39m
+[31m114 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:62
+[39m
+[39m
+[31m115 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:15
+[39m
+[39m
+[31m116 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:29
+[39m
+[39m
+[31m117 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ':' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:34
+[39m
+[39m
+[31m118 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:517:24
+[39m
+[39m
+[31m119 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:517:26
+[39m
+[39m
+[31m120 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unterminated template literal. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:547:2
+[39m
+[39m
+[31m121 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: This expression is not callable.
+  Type 'String' has no call signatures. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:1:1
+[39m
+[39m
+[31m122 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:13
+[39m
+[39m
+[31m123 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:27
+[39m
+[39m
+[31m124 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:48
+[39m
+[39m
+[31m125 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:92:11
+[39m
+[39m
+[31m126 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'greeting'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:92:13
+[39m
+[39m
+[31m127 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:92:24
+[39m
+[39m
+[31m128 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'name'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:92:26
+[39m
+[39m
+[31m129 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:148:18
+[39m
+[39m
+[31m130 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:21
+[39m
+[39m
+[31m131 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'dog'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:23
+[39m
+[39m
+[31m132 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:46
+[39m
+[39m
+[31m133 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'dog'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:48
+[39m
+[39m
+[31m134 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:66
+[39m
+[39m
+[31m135 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'dog'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:175:68
+[39m
+[39m
+[31m136 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:186:29
+[39m
+[39m
+[31m137 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'key'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:186:31
+[39m
+[39m
+[31m138 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:186:37
+[39m
+[39m
+[31m139 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'value'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:186:39
+[39m
+[39m
+[31m140 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Loop$'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:203:18
+[39m
+[39m
+[31m141 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'i'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:203:24
+[39m
+[39m
+[31m142 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:241:22
+[39m
+[39m
+[31m143 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'e'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:241:24
+[39m
+[39m
+[31m144 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:23
+[39m
+[39m
+[31m145 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'number' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:38
+[39m
+[39m
+[31m146 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:46
+[39m
+[39m
+[31m147 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'count'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:48
+[39m
+[39m
+[31m148 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'boolean' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:57
+[39m
+[39m
+[31m149 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:66
+[39m
+[39m
+[31m150 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'isActive'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:259:68
+[39m
+[39m
+[31m151 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:22
+[39m
+[39m
+[31m152 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'mixed'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:24
+[39m
+[39m
+[31m153 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'ID'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:33
+[39m
+[39m
+[31m154 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:42
+[39m
+[39m
+[31m155 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'identity'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:44
+[39m
+[39m
+[31m156 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'ID'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:53
+[39m
+[39m
+[31m157 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Point'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:64
+[39m
+[39m
+[31m158 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:72
+[39m
+[39m
+[31m159 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'x'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:74
+[39m
+[39m
+[31m160 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:78
+[39m
+[39m
+[31m161 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'y'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:268:80
+[39m
+[39m
+[31m162 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:291:25
+[39m
+[39m
+[31m163 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'add'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:308:24
+[39m
+[39m
+[31m164 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: The left-hand side of an assignment expression must be a variable or a property access. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:308:24
+[39m
+[39m
+[31m165 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:308:35
+[39m
+[39m
+[31m166 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'add'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:308:37
+[39m
+[39m
+[31m167 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Default'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:309:17
+[39m
+[39m
+[31m168 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:309:32
+[39m
+[39m
+[31m169 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'greet'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:309:34
+[39m
+[39m
+[31m170 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Rest'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:310:17
+[39m
+[39m
+[31m171 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'sum'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:310:29
+[39m
+[39m
+[31m172 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: The left-hand side of an assignment expression must be a variable or a property access. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:310:29
+[39m
+[39m
+[31m173 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:310:46
+[39m
+[39m
+[31m174 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'sum'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:310:48
+[39m
+[39m
+[31m175 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Generic'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:311:17
+[39m
+[39m
+[31m176 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:311:35
+[39m
+[39m
+[31m177 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'identity'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:311:37
+[39m
+[39m
+[31m178 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'first'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:15
+[39m
+[39m
+[31m179 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:21
+[39m
+[39m
+[31m180 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'first'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:23
+[39m
+[39m
+[31m181 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'second'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:31
+[39m
+[39m
+[31m182 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:38
+[39m
+[39m
+[31m183 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'second'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:40
+[39m
+[39m
+[31m184 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'spread'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:50
+[39m
+[39m
+[31m185 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'arr'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:57
+[39m
+[39m
+[31m186 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:61
+[39m
+[39m
+[31m187 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:62
+[39m
+[39m
+[31m188 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: No value exists in scope for the shorthand property 'arr2'. Either declare one or provide an initializer. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:64
+[39m
+[39m
+[31m189 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'spread'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:73
+[39m
+[39m
+[31m190 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'obj'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:80
+[39m
+[39m
+[31m191 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:84
+[39m
+[39m
+[31m192 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'obj2'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:321:101
+[39m
+[39m
+[31m193 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'config'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:330:15
+[39m
+[39m
+[31m194 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:330:45
+[39m
+[39m
+[31m195 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'port'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:330:47
+[39m
+[39m
+[31m196 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: This expression is not callable.
+  Type 'any[]' has no call signatures. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:22
+[39m
+[39m
+[31m197 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:23
+[39m
+[39m
+[31m198 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'tagSet'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:343:36
+[39m
+[39m
+[31m199 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:20
+[39m
+[39m
+[31m200 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:352:64
+[39m
+[39m
+[31m201 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: This expression is not callable.
+  Type 'any[]' has no call signatures. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:22
+[39m
+[39m
+[31m202 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:23
+[39m
+[39m
+[31m203 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Left side of comma operator is unused and has no side effects. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:26
+[39m
+[39m
+[31m204 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Left side of comma operator is unused and has no side effects. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:362:26
+[39m
+[39m
+[31m205 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: This expression is not callable.
+  Type 'any[]' has no call signatures. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:25
+[39m
+[39m
+[31m206 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:26
+[39m
+[39m
+[31m207 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Left side of comma operator is unused and has no side effects. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m208 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Left side of comma operator is unused and has no side effects. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m209 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Left side of comma operator is unused and has no side effects. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m210 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Left side of comma operator is unused and has no side effects. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:363:29
+[39m
+[39m
+[31m211 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:364:25
+[39m
+[39m
+[31m212 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:365:23
+[39m
+[39m
+[31m213 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:366:23
+[39m
+[39m
+[31m214 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:367:24
+[39m
+[39m
+[31m215 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Valid'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:377:15
+[39m
+[39m
+[31m216 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:377:27
+[39m
+[39m
+[31m217 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:386:23
+[39m
+[39m
+[31m218 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:405:17
+[39m
+[39m
+[31m219 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:21
+[39m
+[39m
+[31m220 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'index'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:23
+[39m
+[39m
+[31m221 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'index'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:45
+[39m
+[39m
+[31m222 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:62
+[39m
+[39m
+[31m223 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'item'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:456:64
+[39m
+[39m
+[31m224 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Repo'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:15
+[39m
+[39m
+[31m225 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: This expression is not callable.
+  Type 'any[]' has no call signatures. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:27
+[39m
+[39m
+[31m226 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:508:28
+[39m
+[39m
+[31m227 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Generic type 'Record' requires 2 type argument(s). At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:517:18
+[39m
+[39m
+[31m228 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:517:26
+[39m
+[39m
+[31m229 ERROR: [31m10905402 ArkTS Compiler Error
+Error Message: A page configured in 'main_pages.json or build-profile.json5' must have one and only one '@Entry' decorator. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets
+
+* Try the following:
+  > Please make sure that the splash page has one and only one '@Entry' decorator.
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:230 WARN:2}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 1 s 460 ms [39m

@@ -1,30 +1,14 @@
 import os
 import collections
-import time
 
 class FileCache:
     """
-    A class to cache file content and allow update and revert operations with file locking
-    (only for update_file and revert_file).
+    A class to cache file content and allow update and revert operations.
     """
 
     def __init__(self, max_size=100):
         self.cache = collections.OrderedDict()
         self.max_size = max_size
-
-    def _acquire_lock(self, file_path):
-        """Acquires a lock on the file by creating a .lock file."""
-        lock_file = file_path + ".lock"
-        while os.path.exists(lock_file):
-            time.sleep(0.1)  # Wait for a short time before checking again
-        with open(lock_file, 'w') as f:
-            f.write("")
-
-    def _release_lock(self, file_path):
-        """Releases the lock by deleting the .lock file."""
-        lock_file = file_path + ".lock"
-        if os.path.exists(lock_file):
-            os.remove(lock_file)
 
     def cache_file(self, file_path):
         """
@@ -59,12 +43,8 @@ class FileCache:
         if file_path not in self.cache:
             self.cache_file(file_path)
 
-        self._acquire_lock(file_path)  # Acquire lock before updating
-        try:
-            with open(file_path, 'w', encoding='utf-8') as file:
-                file.write(new_content)
-        finally:
-            self._release_lock(file_path)
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write(new_content)
 
     def read_file(self, file_path):
         """
@@ -95,10 +75,6 @@ class FileCache:
         if file_path not in self.cache:
             raise KeyError(f"No cached content found for file at path {file_path}.")
 
-        self._acquire_lock(file_path)  # Acquire lock before reverting
-        try:
-            with open(file_path, 'w', encoding='utf-8') as file:
-                file.write(self.cache[file_path])
-            del self.cache[file_path]
-        finally:
-            self._release_lock(file_path)
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write(self.cache[file_path])
+        del self.cache[file_path]

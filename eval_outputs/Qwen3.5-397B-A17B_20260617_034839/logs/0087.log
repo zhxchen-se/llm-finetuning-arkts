@@ -1,0 +1,234 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 4 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 10 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 52 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN: For details about ArkTS syntax errors, see FAQs[39m[39m
+[33m2 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m[39m
+> hvigor [91mERROR: 00305015 Rollup Error
+Error Message: 'return' outside of function (Note that you need plugins to import files that are not JavaScript)
+. At file: D:\DevEcoStudioProjects\llm-finetuning-arkts\entry\src\main\ets\pages\Index.ets:37
+[31m1 ERROR: [31m10605038 ArkTS Compiler Error
+Error Message: Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:25:49
+[39m
+[39m
+[31m2 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:34:11
+[39m
+[39m
+[31m3 ERROR: [31m10605090 ArkTS Compiler Error
+Error Message: Function return type inference is limited (arkts-no-implicit-return-types) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:34:43
+[39m
+[39m
+[31m4 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:34:43
+[39m
+[39m
+[31m5 ERROR: [31m10605093 ArkTS Compiler Error
+Error Message: Using "this" inside stand-alone functions is not supported (arkts-no-standalone-this) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:75:26
+[39m
+[39m
+[31m6 ERROR: [31m10605093 ArkTS Compiler Error
+Error Message: Using "this" inside stand-alone functions is not supported (arkts-no-standalone-this) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:76:31
+[39m
+[39m
+[31m7 ERROR: [31m10605093 ArkTS Compiler Error
+Error Message: Using "this" inside stand-alone functions is not supported (arkts-no-standalone-this) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:77:11
+[39m
+[39m
+[31m8 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:75:17
+[39m
+[39m
+[31m9 ERROR: [31m10605008 ArkTS Compiler Error
+Error Message: Use explicit types instead of "any", "unknown" (arkts-no-any-unknown) At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:76:17
+[39m
+[39m
+[31m10 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected token. A constructor, method, accessor, or property was expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:8:3
+[39m
+[39m
+[31m11 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:13:19
+[39m
+[39m
+[31m12 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:17:14
+[39m
+[39m
+[31m13 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ',' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:33:24
+[39m
+[39m
+[31m14 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:33:33
+[39m
+[39m
+[31m15 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Unexpected keyword or identifier. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:33:35
+[39m
+[39m
+[31m16 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:40:11
+[39m
+[39m
+[31m17 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:41:14
+[39m
+[39m
+[31m18 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:49:60
+[39m
+[39m
+[31m19 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:51:22
+[39m
+[39m
+[31m20 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: ';' expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:52:34
+[39m
+[39m
+[31m21 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:61:13
+[39m
+[39m
+[31m22 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:69:7
+[39m
+[39m
+[31m23 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:83:5
+[39m
+[39m
+[31m24 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Declaration or statement expected. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:87:1
+[39m
+[39m
+[31m25 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'ListController'. Did you mean 'ListScroller'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:6:27
+[39m
+[39m
+[31m26 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'ListController'. Did you mean 'ListScroller'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:6:48
+[39m
+[39m
+[31m27 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'aboutToAppear'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:13:3
+[39m
+[39m
+[31m28 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'initData'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:17:3
+[39m
+[39m
+[31m29 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'getScrollIndex'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:33:3
+[39m
+[39m
+[31m30 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'letter'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:33:18
+[39m
+[39m
+[31m31 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'string' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:33:26
+[39m
+[39m
+[31m32 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'number' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:33:35
+[39m
+[39m
+[31m33 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'letter'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:35:45
+[39m
+[39m
+[31m34 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'build'. Did you mean 'Builder'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:40:3
+[39m
+[39m
+[31m35 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Column' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:41:5
+[39m
+[39m
+[31m36 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Text' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:42:7
+[39m
+[39m
+[31m37 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'List' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:49:7
+[39m
+[39m
+[31m38 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Argument of type '{ space: number; controller: any; }' is not assignable to parameter of type 'ListOptions'.
+  Object literal may only specify known properties, but 'controller' does not exist in type 'ListOptions'. Did you mean to write 'scroller'? At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:49:25
+[39m
+[39m
+[31m39 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'ListItem' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:51:11
+[39m
+[39m
+[31m40 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Column' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:52:13
+[39m
+[39m
+[31m41 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Text' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:53:15
+[39m
+[39m
+[31m42 ERROR: [31m10905236 ArkTS Compiler Error
+Error Message: UI component 'Text' cannot be used in this place. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:57:15
+[39m
+[39m
+[31m43 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'alignItems'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:61:14
+[39m
+[39m
+[31m44 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'width'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:69:8
+[39m
+[39m
+[31m45 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'ScrollPosition'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:77:58
+[39m
+[39m
+[31m46 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'width'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:83:6
+[39m
+[39m
+[31m47 ERROR: [31m10905103 ArkTS Compiler Error
+Error Message: The struct 'Index' must have at least and at most one 'build' method. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:3:8
+
+* Try the following:
+  > A structurally modified page must have at least one and no more than one 'build' method.
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:48 WARN:2}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 1 s 418 ms [39m

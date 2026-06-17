@@ -1,0 +1,493 @@
+> hvigor [32mUP-TO-DATE :entry:default@PreBuild...  [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 3 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateMetadata...  [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MergeProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CreateBuildProfile...  [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 4 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 10 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@MakePackInfo...  [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@GeneratePkgContextInfo...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessProfile...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessRouterMap...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessShareConfig...  [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessResource...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@GenerateLoaderJson...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CompileResource...  [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 51 ms [39m
+> hvigor [32mUP-TO-DATE :entry:default@ProcessLibs...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@DoNativeStrip...  [39m
+> hvigor [32mUP-TO-DATE :entry:default@CacheNativeLibs...  [39m
+
+[33m "@ohos.arkui" is imported by "entry/src/main/ets/pages/Index.ets", but could not be resolved – treating it as an external dependency. [39m
+> hvigor [91mERROR: Failed :entry:default@CompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33m[33mArkTS:WARN File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/entryability/EntryAbility.ets:7:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m[39m
+> hvigor [91mERROR: ArkTS Compiler Error
+[31m1 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find module '@ohos.arkui' or its corresponding type declarations. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:1:26
+[39m
+[39m
+[31m2 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:45:52
+[39m
+[39m
+[31m3 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:45:81
+[39m
+[39m
+[31m4 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:11
+[39m
+[39m
+[31m5 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:49:11
+[39m
+[39m
+[31m6 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:52:11
+[39m
+[39m
+[31m7 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:55:11
+[39m
+[39m
+[31m8 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:58:11
+[39m
+[39m
+[31m9 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:61:11
+[39m
+[39m
+[31m10 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:68:52
+[39m
+[39m
+[31m11 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:68:81
+[39m
+[39m
+[31m12 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:69:11
+[39m
+[39m
+[31m13 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:75:11
+[39m
+[39m
+[31m14 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:81:11
+[39m
+[39m
+[31m15 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:87:11
+[39m
+[39m
+[31m16 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:97:52
+[39m
+[39m
+[31m17 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:97:81
+[39m
+[39m
+[31m18 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:98:11
+[39m
+[39m
+[31m19 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:104:11
+[39m
+[39m
+[31m20 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:114:82
+[39m
+[39m
+[31m21 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:114:111
+[39m
+[39m
+[31m22 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:115:11
+[39m
+[39m
+[31m23 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:118:11
+[39m
+[39m
+[31m24 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:125:52
+[39m
+[39m
+[31m25 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:125:81
+[39m
+[39m
+[31m26 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:126:11
+[39m
+[39m
+[31m27 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:132:11
+[39m
+[39m
+[31m28 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:138:11
+[39m
+[39m
+[31m29 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:161:52
+[39m
+[39m
+[31m30 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:161:81
+[39m
+[39m
+[31m31 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:163:13
+[39m
+[39m
+[31m32 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:171:13
+[39m
+[39m
+[31m33 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:183:11
+[39m
+[39m
+[31m34 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:210:52
+[39m
+[39m
+[31m35 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:210:81
+[39m
+[39m
+[31m36 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:211:11
+[39m
+[39m
+[31m37 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:214:11
+[39m
+[39m
+[31m38 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:217:11
+[39m
+[39m
+[31m39 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:228:52
+[39m
+[39m
+[31m40 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:228:81
+[39m
+[39m
+[31m41 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:229:11
+[39m
+[39m
+[31m42 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:235:11
+[39m
+[39m
+[31m43 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:241:11
+[39m
+[39m
+[31m44 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:247:11
+[39m
+[39m
+[31m45 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:257:52
+[39m
+[39m
+[31m46 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:257:81
+[39m
+[39m
+[31m47 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:258:11
+[39m
+[39m
+[31m48 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:267:11
+[39m
+[39m
+[31m49 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:292:52
+[39m
+[39m
+[31m50 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: 'LengthMetrics' only refers to a type, but is being used as a value here. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:292:81
+[39m
+[39m
+[31m51 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:293:11
+[39m
+[39m
+[31m52 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:299:11
+[39m
+[39m
+[31m53 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot find name 'Chip'. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:305:11
+[39m
+[39m
+[31m54 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Default' })
+            .onClick(() => { this.lastAction = 'Default chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:46:11
+[39m
+[39m
+[31m55 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Primary', backgroundColor: '#007DFF', fontColor: Color.White })
+            .onClick(() => { this.lastAction = 'Primary chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:49:11
+[39m
+[39m
+[31m56 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Success', backgroundColor: '#64BB5C', fontColor: Color.White })
+            .onClick(() => { this.lastAction = 'Success chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:52:11
+[39m
+[39m
+[31m57 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Warning', backgroundColor: '#FF9800', fontColor: Color.White })
+            .onClick(() => { this.lastAction = 'Warning chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:55:11
+[39m
+[39m
+[31m58 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Danger', backgroundColor: '#E84026', fontColor: Color.White })
+            .onClick(() => { this.lastAction = 'Danger chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:58:11
+[39m
+[39m
+[31m59 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Purple', backgroundColor: '#6750A4', fontColor: Color.White })
+            .onClick(() => { this.lastAction = 'Purple chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:61:11
+[39m
+[39m
+[31m60 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Favorite',
+            prefixIcon: { src: $r('sys.media.ohos_ic_public_favor') }
+          })
+            .onClick(() => { this.lastAction = 'Favorite chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:69:11
+[39m
+[39m
+[31m61 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Search',
+            prefixIcon: { src: $r('sys.media.ohos_ic_public_search') }
+          })
+            .onClick(() => { this.lastAction = 'Search chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:75:11
+[39m
+[39m
+[31m62 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Add',
+            prefixIcon: { src: $r('sys.media.ohos_ic_public_add') }
+          })
+            .onClick(() => { this.lastAction = 'Add chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:81:11
+[39m
+[39m
+[31m63 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Settings',
+            prefixIcon: { src: $r('sys.media.ohos_ic_public_settings') }
+          })
+            .onClick(() => { this.lastAction = 'Settings chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:87:11
+[39m
+[39m
+[31m64 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Arrow Right',
+            suffixIcon: { src: $r('sys.media.ohos_ic_public_arrow_right') }
+          })
+            .onClick(() => { this.lastAction = 'Arrow Right chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:98:11
+[39m
+[39m
+[31m65 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'More',
+            suffixIcon: { src: $r('sys.media.ohos_ic_public_more') }
+          })
+            .onClick(() => { this.lastAction = 'More chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:104:11
+[39m
+[39m
+[31m66 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Small', size: ChipSize.SMALL })
+            .onClick(() => { this.lastAction = 'Small chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:115:11
+[39m
+[39m
+[31m67 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Medium', size: ChipSize.MEDIUM })
+            .onClick(() => { this.lastAction = 'Medium chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:118:11
+[39m
+[39m
+[31m68 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Option A', selected: this.isSelected1 })
+            .onSelected((selected: boolean) => {
+              this.isSelected1 = selected
+              this.lastAction = `Option A selected: ${selected}`
+            })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:126:11
+[39m
+[39m
+[31m69 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Option B', selected: this.isSelected2 })
+            .onSelected((selected: boolean) => {
+              this.isSelected2 = selected
+              this.lastAction = `Option B selected: ${selected}`
+            })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:132:11
+[39m
+[39m
+[31m70 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Option C', selected: this.isSelected3 })
+            .onSelected((selected: boolean) => {
+              this.isSelected3 = selected
+              this.lastAction = `Option C selected: ${selected}`
+            })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:138:11
+[39m
+[39m
+[31m71 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Close Me', showCloseIcon: true })
+              .onDelete(() => {
+                this.isClosableVisible = false
+                this.lastAction = 'Closable chip deleted'
+              })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:163:13
+[39m
+[39m
+[31m72 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+              text: 'Tag',
+              showCloseIcon: true,
+              backgroundColor: '#E8F0FE',
+              fontColor: '#007DFF'
+            })
+              .onDelete(() => {
+                this.isTagVisible = false
+                this.lastAction = 'Tag chip deleted'
+              })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:171:13
+[39m
+[39m
+[31m73 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: `Deleted: ${this.deleteCount}`,
+            showCloseIcon: true
+          })
+            .onDelete(() => {
+              this.deleteCount++
+              this.lastAction = `Delete count: ${this.deleteCount}`
+            })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:183:11
+[39m
+[39m
+[31m74 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Enabled', enabled: true })
+            .onClick(() => { this.lastAction = 'Enabled chip clicked' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:211:11
+[39m
+[39m
+[31m75 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Disabled', enabled: false })
+            .onClick(() => { this.lastAction = 'This should not appear' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:214:11
+[39m
+[39m
+[31m76 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Disabled Colored',
+            enabled: false,
+            backgroundColor: '#007DFF',
+            fontColor: Color.White
+          })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:217:11
+[39m
+[39m
+[31m77 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Rounded',
+            backgroundColor: '#FFF3E0',
+            fontColor: '#E65100'
+          })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:229:11
+[39m
+[39m
+[31m78 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Teal',
+            backgroundColor: '#E0F2F1',
+            fontColor: '#00695C'
+          })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:235:11
+[39m
+[39m
+[31m79 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Indigo',
+            backgroundColor: '#E8EAF6',
+            fontColor: '#283593'
+          })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:241:11
+[39m
+[39m
+[31m80 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Pink',
+            backgroundColor: '#FCE4EC',
+            fontColor: '#AD1457'
+          })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:247:11
+[39m
+[39m
+[31m81 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Filter',
+            prefixIcon: { src: $r('sys.media.ohos_ic_public_search') },
+            showCloseIcon: true,
+            backgroundColor: '#E8F0FE',
+            fontColor: '#007DFF'
+          })
+            .onDelete(() => { this.lastAction = 'Filter chip deleted' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:258:11
+[39m
+[39m
+[31m82 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({
+            text: 'Category',
+            prefixIcon: { src: $r('sys.media.ohos_ic_public_settings') },
+            showCloseIcon: true,
+            backgroundColor: '#FFF3E0',
+            fontColor: '#E65100'
+          })
+            .onDelete(() => { this.lastAction = 'Category chip deleted' })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:267:11
+[39m
+[39m
+[31m83 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Increment' })
+            .onClick(() => {
+              this.clickCount++
+              this.lastAction = `Count incremented to ${this.clickCount}`
+            })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:293:11
+[39m
+[39m
+[31m84 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Decrement', backgroundColor: '#FFEBEE', fontColor: '#C62828' })
+            .onClick(() => {
+              this.clickCount--
+              this.lastAction = `Count decremented to ${this.clickCount}`
+            })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:299:11
+[39m
+[39m
+[31m85 ERROR: [31m10905204 ArkTS Compiler Error
+Error Message: 'Chip({ text: 'Reset', backgroundColor: '#E8F5E9', fontColor: '#2E7D32' })
+            .onClick(() => {
+              this.clickCount = 0
+              this.lastAction = 'Count reset to 0'
+            })' does not meet UI component syntax. At File: D:/DevEcoStudioProjects/llm-finetuning-arkts/entry/src/main/ets/pages/Index.ets:305:11
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:86 WARN:1}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 936 ms [39m

@@ -306,12 +306,6 @@ def write_result_header(results_csv: Path) -> None:
         writer.writeheader()
 
 
-def append_result(results_csv: Path, row: dict[str, object]) -> None:
-    with results_csv.open("a", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=RESULT_FIELDS)
-        writer.writerow(row)
-
-
 def write_results(results_csv: Path, rows: list[dict[str, object]]) -> None:
     results_csv.parent.mkdir(parents=True, exist_ok=True)
     with results_csv.open("w", newline="", encoding="utf-8-sig") as f:
